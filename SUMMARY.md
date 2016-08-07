@@ -1,4 +1,4 @@
 # Summary
 
-* Chapter 1 - Welcome to the Nanodegree
+* [Chapter 1 - Welcome to the Nanodegree](chapter1.md)
 
