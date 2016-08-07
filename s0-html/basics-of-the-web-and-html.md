@@ -1,6 +1,8 @@
 # Basics of the Web and HTML
 
 ## Resources
+### HTML Playground
+[CodePen](http://codepen.io/) is a playground for the front end web.  
 [scratchpad.io](http://scratchpad.io/) - (a realtime html + css editor)
 
 ## An Early Win
