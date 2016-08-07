@@ -9,7 +9,7 @@
 ### [Study Tips](http://blog.udacity.com/2014/09/top-study-tips-for-online-courses.html)
 - Study for at least an hour everyday
 - Every bit counts - use the mobile app
-- Practice, practice, practice
+- Use quizzes to practice, practice, practice
 	- Students who graduate Udacity courses tend to spend about the same amount of time working on quizzes as they do watching videos. 
 - Try hard, try often, and you'll succeed
 	- With each time you test or submit an answer, you have the opportunity to learn from your mistakes and become a better programmer.
