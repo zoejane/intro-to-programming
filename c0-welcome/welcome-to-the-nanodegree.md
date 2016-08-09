@@ -28,7 +28,9 @@
 
 ####  2. Events and [Google+ Communities](https://plus.google.com/u/0/communities/100982870918349023509)
 
-#### 3. [Webcasts](https://discussions.udacity.com/c/nd000-ipnd-broadcast/webcast-notes)
+#### 3. Webcasts
+- [Webcasts Notes @Forum](https://discussions.udacity.com/c/nd000-ipnd-broadcast/webcast-notes)
+- [Summaries and transcripts of Webcasts @GitHub](https://github.com/udacity/ipnd-webcasts)
 - 每周三 上午7点
 - 可以在Google+的event界面上提问
 
