@@ -1,0 +1,170 @@
+<head>
+  <title>Andy's Notes</title>
+
+  <!-- I added a <link> element to link this 
+  html file to demo-2.css -->
+  <link rel="stylesheet" href="demo-2.css">
+</head>
+
+<!-- Each lesson div has a class="lesson". The concepts, concept 
+  titles, and concept descriptions also have been put into divs 
+  with class names. -->
+<body>
+  <h1>Important Concepts</h1>
+  <div class="lesson">
+    <h2>Lesson 1: The Basics of the Web and HTML</h2>
+    <div class="concept">
+      <div class="concept-title">
+        How the Web Works
+      </div>
+      <div class="concept-description">
+        
+        <!-- Notice how I removed the <em> tags from the 
+        paragraph below. I didn't need to do this, I just 
+        wanted to show how you can use a span and some 
+        styling to achieve the same effect. -->
+        <p>
+          The web is a bunch of computers that communicate with 
+          each other. When a person goes to a web page like 
+          www.google.com, their computer sends a 
+          <span class="italic">HTTP Request</span> to 
+          a <span class="italic">server</span>. 
+        </p>
+        
+        <!-- Previously I was using <br> tags to force 
+        the line breaks. Now I'm using <p> tags for what 
+        they're meant to indicate: paragraphs. -->
+        <p>
+          The server finds the appropriate HTML document and sends 
+          it back to the user's computer where a <span class="italic">
+          web browser</span> interprets the page and displays it on 
+          the user's screen. 
+          <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/e-48329854/m-48480496">This video</a> 
+          does a good job of explaining more.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        HTML
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML stands for <span class="italic">Hypertext Markup 
+          Language.</span> HTML documents form the majority of the 
+          content on the web.
+        </p>
+        <p>
+          HTML documents contain <span class="italic">text 
+          content</span> which describes "what you see" and 
+          <span class="italic">markup</span> which describes 
+          "how it looks". <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48724340">This 
+          video</a> gives a good overview.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Tags and Elements
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML documents are made of HTML 
+          <span class="bold">elements</span>. When writing HTML, we 
+          tell browsers the type of each element by using HTML 
+          <span class="bold">tags</span>. 
+          <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48723444">This video</a> explains the 
+          distinction well.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Why Computers are Stupid
+      </div>
+      <div class="concept-description">
+        <p>
+          Computers are stupid because they interpret 
+          instructions literally. This makes them very 
+          unforgiving since a small mistake by a 
+          programmer can cause huge problems in a program.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Inline vs Block Elements
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML elements are either <span class="bold">inline</span> 
+          or <span class="bold">block</span>. Block elements form 
+          an "invisible box" around the content inside of them.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="lesson">
+    <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+    <div class="concept">
+      <div class="concept-title">
+        Developer Tools (in the Browser)
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML elements are either <span class="bold">inline</span> 
+          or <span class="bold">block</span>. Block elements form 
+          an "invisible box" around the content inside of them.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        The "tree-like structure" of HTML
+      </div>
+      <div class="concept-description">
+        <p>
+          The "tree-like structure" comes from the fact that HTML 
+          elements can have other elements inside of them. You can 
+          draw this relationship like a family tree. My mother 
+          had multiple children. So did her mother, and so on...
+        </p>
+        <p>
+          In a browser, this structure shows up as a series 
+          of nested boxes. There are boxes inside of boxes 
+          inside of boxes, and so on...
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        The relationship between indented HTML and boxes
+      </div>
+      <div class="concept-description">
+        <p>
+          When you read an HTML document as 
+          <span class="italic">text</span>, you see a wave of 
+          changing indentations going up and down the left side 
+          of the document. The more indented an element is, the 
+          more deeply nested its corresponding "box" is.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Text Editors (for programming)
+      </div>
+      <div class="concept-description">
+        <p>
+          When writing code, programmers use special text editors 
+          (like Sublime Text for example). These editors make the 
+          programmer's life easier. For example, some text editors 
+          will automatically generate a closing HTML tag when you 
+          write an opening tag.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- Check out all those closing tags in a row!  -->
+

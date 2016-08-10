@@ -1,0 +1,52 @@
+/* This code gives the only <h1> 
+on the page a white TEXT color */
+h1 {
+	color: white;
+}
+
+/* This code makes the <body> have 
+a black BACKGROUND color. This rule 
+would apply to all the elements 
+inside of the <body> unless... */
+body {
+	background-color: black;
+}
+
+/* ...this code gives everything 
+inside of the elements with 
+class="lesson" a gray background 
+color. Unless, of course... */
+.lesson {
+	background-color: gray;
+}
+
+/* ...an element inside has 
+a class="concept" */
+.concept {
+	background-color: white;
+}
+
+/* This code sets the font size to 
+20 pixels, makes it bold, and centers 
+it.*/
+.concept-title {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Since I had removed all the <em>
+tags from the HTML and replaced them
+with <span class="italic">, I needed 
+to write this to have the "italic" 
+class actually do something... */
+.italic {
+	font-style: italic;
+}
+
+/* ...I did something similar with 
+the <b> tags*/
+.bold {
+	font-weight: bold;
+}
+
