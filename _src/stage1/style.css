@@ -1,16 +1,34 @@
 /* Give <h1> a white TEXT color. */
 h1 {
-    color: white;
+	text-align: center;
+	color: #294860;
 }
 
-/* Make the <body> have a black BACKGROUND color. */
+/* Margins push other elements away. */ 
+h2 {
+	margin: 10px;
+}
+
+/* Center the image and make the corners rounded. */
+img {
+	display: block;
+	margin: auto;
+	border-radius: 20px;
+}
+
+/* Change to a nicer font. */
 body {
-    background-color: black;
+    font-family: Helvetica;
 }
 
-/* Give everything inside of the elements with class="stage" a gray background color. */
+/* Change everything inside of the elements with class="stage". */
 .stage {
-    background-color: gray;
+	background-color: #294860;
+	/* The border-radius attribute makes the corners rounded. */
+	border-radius: 20px;
+	color: white;
+	/* The padding attribute gives space between text inside stage divs and the border of stage divs. */
+	padding: 10px;
 }
 
 /* Give everything inside of the elements with class="concept" a white background color */
@@ -24,3 +42,26 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+.concept {
+	background-color: #DFEAF1;
+	/* The padding attribute gives space between text inside divs and the border of divs. */
+	padding: 4px;
+	/* Margins push other elements away. */
+	margin: 10px;
+	border-radius: 4px;
+	color: black;
+}
+
+.concept-title {
+	font-size: 20px;
+	margin: 8px;
+	text-align: center;
+	color: #294860;
+}
+
+.concept-description {
+	font-weight: lighter;
+	margin: 6px;
+}
+
