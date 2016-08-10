@@ -151,6 +151,7 @@ The line of code that says background-color : black; is a **declaration**. backg
 ### Selecting by class
 In the example above, we set the background-color of every h1 to black. If we only want to add style to certain h1s, we can use class selectors. Try copying the following code into scratchpad.io to see how this works.
 
+
 ```
 <div class="stop"></div>
 <div class="slow"></div>
@@ -310,7 +311,7 @@ So **schedule a time to come back** (that's important), and **take a well-earned
 ## The Box Revisited
 ![](http://7xsjcm.com1.z0.glb.clouddn.com/16-8-10/32863755.jpg)
 
-## CSS to Use for Quiz
+## CSS to Use 
 In your style.css you should set the screenshot class to max-width of 460px, and the description to 705px. The other things to set in your style.css file are the **box-sizing definitions** and the **outline that allows you to easily see all the boxes on your page**. Put the following in your style.css file:
 
 ```
