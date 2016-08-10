@@ -15,7 +15,21 @@
 - IPND Office Hours: Stage 0/1: Understanding div, span, id, and class
 	- [Video](http://bit.ly/1FbYnF5)
 	- [Transcript](http://discussions.udacity.com/t/stage-1-webcasts/16000/4?_ga=1.212110288.53639439.1458784522)
+- IPND: All stages: Understand the importance of style
+	- [Video](http://bit.ly/1K0yFXm)
+	- [Transcript](https://discussions.udacity.com/t/stage-2-webcasts/16001/7?_ga=1.51519597.53639439.1458784522)
+- Using Semantic Tags
+	- [Content Sectioning
+](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning)
+	- [Sections and Outlines of an HTML5 Document - The HTML5 Outline Algorithm
+](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#The_HTML5_Outline_Algorithm)
+- [A Complete Guide to Flexbox
+](http://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- **[Additional Resources @Andy Brown's IPND Notes](http://learn-2-code.appspot.com/additional_resources/#topic-1)**
 
+
+	
+	
 ## Tips
 ### [Center an Image](http://www.w3schools.com/css/css_align.asp)
 To center an image, use margin: auto; and make it into a block element.  
@@ -292,3 +306,87 @@ In CSS, code comments begin with ```/*``` and end with ```*/```.
 You've already covered the most conceptually important parts of this lesson. The rest will give you **impressive new ways to use CSS and HTML**, but it will be a little intense (especially if you're feeling mentally tired).
 
 So **schedule a time to come back** (that's important), and **take a well-earned break**. Give your brain some time to digest what you've learned about HTML and CSS and **how HTML classes combined with CSS styling can help you avoid repetition** (and make really cool web pages).
+
+## The Box Revisited
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-8-10/32863755.jpg)
+
+## CSS to Use for Quiz
+In your style.css you should set the screenshot class to max-width of 460px, and the description to 705px. The other things to set in your style.css file are the **box-sizing definitions** and the **outline that allows you to easily see all the boxes on your page**. Put the following in your style.css file:
+
+```
+* {
+   outline: 1px solid red !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+```
+
+## Positioning Boxes
+A great guide to flexbox can be found [here](http://css-tricks.com/snippets/css/a-guide-to-flexbox/)!
+
+At 01:02 in the video, Jessica uses Dev Tools to add the CSS rule ```display: flex``` to ```element.style```, which applies the CSS to the selected ```div``` element temporarily.
+
+Students following along with the videos should create an .app class in their ```style.css``` as follows:
+
+```
+.app {
+    display: flex;
+}
+```
+
+This rule as-is works with Chrome 29+, IE 11+, and Mozilla 28+. In order to support Safari, the -webkit- prefix must be added:
+
+```
+.app {
+    display: -webkit-flex;
+    display: flex;
+}
+```
+
+## Box Sizing and Positioning Summary
+You can find more resources in [the example webpage I've made](http://learn-2-code.appspot.com/additional_resources/#topic-1).
+
+### Box Sizing
+There are four main points that Jessica addressed about box sizing.
+
+- HTML elements are boxes and each box has 4 components.
+- Because there are so many components to each box, it can often be hard to get the size of a box just right.
+- There are two techniques you can use to help deal with sizing issues.
+	- Set sizes in terms of **percentages** rather than pixels.
+	- Set the box-sizing attribute to **border-box** for every element. 
+	
+	```
+		* {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	    box-sizing: border-box;
+		} 
+	```
+- Different browsers work slightly differently. Sometimes this causes different browsers to display the same code differently.
+
+### Box Positioning
+- Divs are block elements (as opposed to inline), so by default they take up the entire width of a page.
+- Adding the rule **```display: flex;```** to the appropriate CSS will override this behavior and **let divs appear next to each other**.
+
+## Adding Image
+```
+<img src="img/app.png" alt="This is a screenshot">
+```
+
+## Code, Test, Refine
+- Get the **structure** of the page right. You should be able to do that from the **design**, by visually **boxifying** it.
+- Then move on to work on the **tags**. If something needs to be a heading, make it so.
+- Then think about **the size of the boxes**. How big should they be?
+- And then, how to **position** them where you want on the screen.
+- Onece the general layout is complete, the time has come for **smaller details**, and these you can polish until the page looks exactly like the design image you were given.
+
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-8-10/95346255.jpg)
+
+## More on DevTools
+Note that the changes you make in Dev Tools are temporary. If you want to save them, you must select the **source file** in the **'Sources' tab**, right or control+click on the file you wish to save, select 'Save As' and save the file to the directory that contains the original file. You may want to create a **back-up copy** of the file before making changes to it.
