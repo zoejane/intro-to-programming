@@ -1,0 +1,26 @@
+/* Give <h1> a white TEXT color. */
+h1 {
+    color: white;
+}
+
+/* Make the <body> have a black BACKGROUND color. */
+body {
+    background-color: black;
+}
+
+/* Give everything inside of the elements with class="stage" a gray background color. */
+.stage {
+    background-color: gray;
+}
+
+/* Give everything inside of the elements with class="concept" a white background color */
+.concept {
+    background-color: white;
+}
+
+/* This code sets the font size to 20 pixels, makes it bold, and centers it.*/
+.concept-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
