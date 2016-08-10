@@ -24,43 +24,32 @@ body {
 /* Change everything inside of the elements with class="stage". */
 .stage {
 	background-color: #294860;
-	/* The border-radius attribute makes the corners rounded. */
-	border-radius: 20px;
 	color: white;
 	/* The padding attribute gives space between text inside stage divs and the border of stage divs. */
 	padding: 10px;
-}
-
-/* Give everything inside of the elements with class="concept" a white background color */
-.concept {
-    background-color: white;
-}
-
-/* This code sets the font size to 20 pixels, makes it bold, and centers it.*/
-.concept-title {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+	/* The border-radius attribute makes the corners rounded. */
+	border-radius: 20px;
 }
 
 .concept {
 	background-color: #DFEAF1;
+	color: black;
 	/* The padding attribute gives space between text inside divs and the border of divs. */
 	padding: 4px;
 	/* Margins push other elements away. */
 	margin: 10px;
 	border-radius: 4px;
-	color: black;
 }
 
 .concept-title {
-	font-size: 20px;
-	margin: 8px;
 	text-align: center;
 	color: #294860;
+	font-size: 20px;
+	margin: 8px;
 }
 
 .concept-description {
+	/* Change to a lighter font-weight. */
 	font-weight: lighter;
 	margin: 6px;
 }
