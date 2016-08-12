@@ -57,6 +57,7 @@ li {
 	padding: 10px;
 	/* The border-radius attribute makes the corners rounded. */
 	border-radius: 20px;
+	margin: 20px;
 }
 
 .concept {
