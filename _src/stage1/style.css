@@ -14,6 +14,8 @@ img {
 	display: block;
 	margin: auto;
 	border-radius: 20px;
+	max-height:100%;
+	max-width:100%;
 }
 
 /* Change to a nicer font. */
@@ -24,12 +26,11 @@ body {
 .toc {
 	background-color: #DFEAF1;
 	border-radius: 20px;
-	/* If the margin property has two values:
-	margin: 25px 50px;
-	top and bottom margins are 25px
-	right and left margins are 50px */
-	margin:10px 400px;
+	/* To horizontally center a block element (like <div>), 
+	use margin: auto; */
+	margin:auto;
 	padding:10px 50px;
+	max-width: 400px;
 }
 
 .toc-title {
@@ -56,7 +57,6 @@ li {
 	padding: 10px;
 	/* The border-radius attribute makes the corners rounded. */
 	border-radius: 20px;
-	margin: 0px 50px;
 }
 
 .concept {
