@@ -15,15 +15,80 @@ what kind of document this is (HTML) -->
 	<!-- Each stage div has a class="stage". -->
 	<!-- The concepts, concept titles, and concept descriptions also have been put into divs with class names. -->
 	<body>
+		<!-- The div of Table of Contents starts here. -->
+		<div class="table-of-contents">
+			<h1>Table of Contents</h1>
+
+			<!--An ordered list starts with the <ol> tag. 
+			Each list item starts with the <li> tag.-->
+			<ol>
+				<li>
+					<a href="#stage0">Stage 0 - Getting Started with HTML</a>
+				</li>
+					<!--An unordered list starts with the <ul> tag. 
+					Each list item starts with the <li> tag.-->
+					<ul>
+						<li>
+							<a href="#stage0-1">HTML</a>
+						</li>
+						<li>
+							<a href="#stage0-2">Components of the Web</a>
+						</li>
+						<li>
+							<a href="#stage0-3">HTML Tags</a>
+						</li>
+						<li>
+							<a href="#stage0-4">Computers Are Stupid</a>
+						</li>
+						<li>
+							<a href="stage0-5">It's OK to Forget</a>
+						</li>
+					</ul>
+				<li>
+					<a href="#stage1">Stage 1 - Make a Web Page</a>
+				</li>
+					<ul>
+						<li>
+							<a href="#stage1-1">The Four Stages of Expertise</a>
+						</li>
+						<li>
+							<a href="#stage1-2">Why Start With HTML and CSS</a>
+						</li>
+						<li>
+							<a href="#stage1-3">HTML</a>
+						</li>
+						<li>
+							<a href="#stage1-4">CSS</a>
+						</li>
+						<li>
+							<a href="#stage1-5">DOM</a>
+						</li>
+						<li>
+							<a href="#stage1-6">Boxes To HTML</a>
+						</li>
+						<li>
+							<a href="#stage1-7">How to Listen to Experts</a>
+						</li>
+						<li>
+							<a href="#stage1-8">Adding Style</a>
+						</li>
+						<li>
+							<a href="#stage1-9">The Box Revisited</a>
+						</li>
+					</ul>
+			</ol>
+		</div>
+
 		<!-- This is the class I take in Udacity. -->
 		<h1>Intro to Programming</h1>
     	
     	<!-- The div of Stage 0 starts here. -->
-    	<div class = "stage">
+    	<div class = "stage" id="stage0">
 		    <h2>Stage 0 - Getting Started with HTML</h2>
 		    
 		    <!-- The div of concept 1 starts here. -->
-		    <div class = "concept">
+		    <!--The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).-->
+		    <div class = "concept" id="stage0-1">
 		    	<!-- The div of concept-title starts here. -->
 			    <div class="concept-title">
 			    	HTML
@@ -35,7 +100,7 @@ what kind of document this is (HTML) -->
 			</div>
 
 			<!-- The div of concept 2 starts here. -->
-			<div class = "concept">
+			<div class = "concept" id="stage0-2">
 			    <div class="concept-title">
 			    	Components of the Web
 			    </div>
@@ -46,7 +111,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage0-3">
 			    <div class="concept-title">
 			    	HTML Tags
 			    </div>
@@ -57,7 +122,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage0-4">
 			    <div class="concept-title">
 			    	Computers Are Stupid
 			    </div>
@@ -66,7 +131,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage0-5">
 			    <div class="concept-title">
 			    	It's OK to Forget
 			    </div>
@@ -75,7 +140,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage0-6">
 				<div class="concept-title">
 			    	Inline vs Block
 			    </div>
@@ -89,10 +154,10 @@ what kind of document this is (HTML) -->
 		<!-- The div of Stage 0 ends here. -->
 
 		<!-- The div of Stage 1 starts here. -->
-		<div class="stage">
+		<div class="stage" id="stage1">
 			<h2>Stage 1 - Make a Web Page</h2>
 		    
-		    <div class = "concept">
+		    <div class = "concept" id="stage1-1">
 			    <div class="concept-title">
 			    	The Four Stages of Expertise
 			    </div>
@@ -103,7 +168,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage1-2">
 				<div class="concept-title">
 			    	Why Start With HTML and CSS
 			    </div>
@@ -112,7 +177,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage1-3">
 			    <div class="concept-title">
 			    	HTML
 			    </div>
@@ -121,7 +186,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage1-4">
 			    <div class="concept-title">
 			    	CSS
 			    </div>
@@ -130,7 +195,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage1-5">
 			    <div class="concept-title">
 			    	DOM
 			    </div>
@@ -139,7 +204,7 @@ what kind of document this is (HTML) -->
 			    </div>
 			</div>
 
-			<div class = "concept">
+			<div class = "concept" id="stage1-6">
 				<div class="concept-title">
 			    	Boxes To HTML
 			    </div>
@@ -149,12 +214,8 @@ what kind of document this is (HTML) -->
 			    	</p>
 			    </div>
 			</div>
-		</div>
-
-		<div class = "stage">
-		    <h2>Stage 1 - Make a Web Page</h2>
 		    
-		    <div class = "concept">
+		    <div class = "concept" id="stage1-7">
 			    <div class="concept-title">
 			    	How to Listen to Experts
 			    </div>
@@ -164,7 +225,7 @@ what kind of document this is (HTML) -->
 			</div>
 
 			<div class = "concept">
-			    <div class="concept-title">
+			    <div class="concept-title" id="stage1-8">
 			    	Adding Style
 			    </div>
 			    <div class="concept-description">
@@ -175,7 +236,7 @@ what kind of document this is (HTML) -->
 			</div>
 
 			<div class = "concept">
-			    <div class="concept-title">
+			    <div class="concept-title" id="stage1-9">
 			    	The Box Revisited
 			    </div>
 			    <div class="concept-description">
