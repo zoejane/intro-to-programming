@@ -18,10 +18,17 @@ img {
 	max-width:100%;
 }
 
-/* Change to a nicer font. */
+/* sets the left and right margins to equal values. 
+This centers the body on the page.*/
 body {
-    font-family: Helvetica;
-}
+	padding: 20px 10px;
+	font-family: Helvetica;
+	max-width: 2000px;
+	/* The 0 refers to the top and bottom margins 
+	and the "auto" automatically */
+	margin: 0 auto; 
+	font-size: 1.4em;
+} 
 
 .toc {
 	background-color: #DFEAF1;
