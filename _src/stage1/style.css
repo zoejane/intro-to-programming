@@ -21,6 +21,27 @@ body {
     font-family: Helvetica;
 }
 
+.toc {
+	background-color: #DFEAF1;
+	content: white;
+	border-radius: 20px;
+	/* If the margin property has two values:
+	margin: 25px 50px;
+	top and bottom margins are 25px
+	right and left margins are 50px */
+	margin:10px 400px;
+	padding:10px 50px;
+}
+
+.toc-title {
+	color: #294860;
+	text-align: center;
+}
+
+.toc-stage {
+	font-weight: bold;
+}
+
 /* Change everything inside of the elements with class="stage". */
 .stage {
 	background-color: #294860;
@@ -29,6 +50,7 @@ body {
 	padding: 10px;
 	/* The border-radius attribute makes the corners rounded. */
 	border-radius: 20px;
+	margin: 0px 50px;
 }
 
 .concept {
@@ -54,3 +76,9 @@ body {
 	margin: 6px;
 }
 
+li {
+	font-size: 20px;
+	/* each line of text should occupy 44 pixels of height 
+	(good for mobile usage and fat fingers) */
+	line-height: 44px; 
+}
