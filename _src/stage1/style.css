@@ -23,7 +23,6 @@ body {
 
 .toc {
 	background-color: #DFEAF1;
-	content: white;
 	border-radius: 20px;
 	/* If the margin property has two values:
 	margin: 25px 50px;
@@ -40,6 +39,13 @@ body {
 
 .toc-stage {
 	font-weight: bold;
+}
+
+li {
+	font-size: 20px;
+	/* each line of text should occupy 40 pixels of height 
+	(good for mobile usage and fat fingers) */
+	line-height: 40px; 
 }
 
 /* Change everything inside of the elements with class="stage". */
@@ -74,11 +80,4 @@ body {
 	/* Change to a lighter font-weight. */
 	font-weight: lighter;
 	margin: 6px;
-}
-
-li {
-	font-size: 20px;
-	/* each line of text should occupy 44 pixels of height 
-	(good for mobile usage and fat fingers) */
-	line-height: 44px; 
 }
