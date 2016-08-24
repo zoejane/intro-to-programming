@@ -1,4 +1,14 @@
 # Project for Stage2
+## Tips
+[How can I return two values from a function in Python?](http://stackoverflow.com/questions/9752958/how-can-i-return-two-values-from-a-function-in-python)
+```
+def select_choice():
+    ...
+    return i, card
+
+my_i, my_card = select_choice()
+```
+
 ## Project Submission
 
 In this stage, you will use the Python programming language to build your own quiz. You will use a fill-in-the blank style to create a quiz that can even be used as a study tool to help you remember important vocabulary.
