@@ -39,7 +39,6 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 blanks_list = []
 for index in range(1, 6):
     blanks_list.append("___"+str(index)+"___")
-print blanks_list
 
 def word_in_blanks(word, blanks_list):
     for blank in blanks_list:
@@ -47,10 +46,8 @@ def word_in_blanks(word, blanks_list):
             return blank
     return None
 
-print word_in_blanks("___1___",blanks_list)
-
 def play_game(sample, blanks_list): 
-    print "The current paragraph reads as such:"
+    print "\nThe current paragraph reads as such:"
     print sample
 
     replaced = []
@@ -59,20 +56,17 @@ def play_game(sample, blanks_list):
     for word in sample_list:
         replacement = word_in_blanks(word, blanks_list)
         if replacement != None:
-            user_input = raw_input("What should be substituted in for " + replacement + " ?")
+            user_input = raw_input("\nWhat should be substituted in for " + replacement + " ?")
             word = word.replace(replacement, user_input)
             replaced.append(word)
+            print "\nThe current paragraph reads as such:"
             print sample.replace(replacement,word)
-
-
 
         else:
             replaced.append(word)
-
-
 	
     replaced = " ".join(replaced)
-    print "The current paragraph reads as such:"
+    print "\nThe current paragraph reads as such:"
     return replaced
 
 
