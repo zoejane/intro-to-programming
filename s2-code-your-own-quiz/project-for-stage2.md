@@ -59,4 +59,19 @@ blankets_list = []
 for index in range(1, 5):
 	blankets_list.append("___"+str(index)+"___")
 print blankets_list
+
+user_input = raw_input("What should be substituted in for " + blanket + " ?")
+
+check if sample have words in blankets_list
+
+def word_in_blankets(word, blankets_list):
+	for blanket in blankets_list:
+	    if blanket in word:
+	        return blanket
+	return None
+
+replace = []
+sample = sample.split()
+for word in sample:
+    blanket = 
 ```

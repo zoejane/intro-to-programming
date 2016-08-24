@@ -34,3 +34,17 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 # How can you adapt that design to work with numbered blanks?
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd1-1/20min/
+
+
+blankets_list = []
+for index in range(1, 6):
+	blankets_list.append("___"+str(index)+"___")
+print blankets_list
+
+def word_in_blankets(word, blankets_list):
+	for blanket in blankets_list:
+	    if blanket in word:
+	        return blanket
+	return None
+
+print word_in_blankets("___1___",blankets_list)
