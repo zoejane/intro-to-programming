@@ -9,6 +9,15 @@ def select_choice():
 my_i, my_card = select_choice()
 ```
 
+[Replace first occurrence only of a string?](http://stackoverflow.com/questions/6005891/replace-first-occurrence-only-of-a-string)
+```
+text = text.replace("very", "not very", 1)
+```
+
+The third parameter is the maximum number of occurrences that you want to replace. From the document of python:
+
+string.replace(s, old, new[, maxreplace]) Return a copy of string s with all occurrences of substring old replaced by new. If the optional argument maxreplace is given, the first maxreplace occurrences are replaced.
+
 ## Project Submission
 
 In this stage, you will use the Python programming language to build your own quiz. You will use a fill-in-the blank style to create a quiz that can even be used as a study tool to help you remember important vocabulary.

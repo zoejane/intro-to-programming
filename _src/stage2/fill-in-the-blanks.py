@@ -80,7 +80,9 @@ def play_game(sample, answer, blanks_list):
                 word = word.replace(replacement, user_input)
                 replaced.append(word)
                 print "\nCorrect!\n\nThe current paragraph reads as such:"
-                print sample.replace(replacement,word)
+                sample = sample.replace(replacement,word,1)
+                print sample
+                #print sample.replace(replacement,word)
             else:
             	return "You've failed too many straight guesses!  Game over!"
 
@@ -91,7 +93,7 @@ def play_game(sample, answer, blanks_list):
 	
     replaced = " ".join(replaced)
     print "\nThe current paragraph reads as such:"
-    return replaced
+    return "You won!"
 
 
 print play_game(sample1,answer1, blanks_list)
