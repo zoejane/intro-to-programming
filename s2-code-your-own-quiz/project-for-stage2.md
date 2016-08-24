@@ -105,11 +105,24 @@ Make the Version 1's output like the demo
 
 ```
 
-print "The current paragraph reads as such:"
+print "\nThe current paragraph reads as such:"
 
 ---------
 after every input, replace the blank, print it out
 
 print sample.replace(replacement,word)
+
+```
+
+#### Version 3
+Compare user's answer with real answer
+
+```
+
+add answer to def play_game(sample, answer, blanks_list)
+
+---------
+
+answer1 = ["world", "Python", "print","HTML"]
 
 ```

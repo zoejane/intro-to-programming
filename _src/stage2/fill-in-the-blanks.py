@@ -35,20 +35,39 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd1-1/20min/
 
+sample1 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
+is type in:
+___3___ "Hello ___1___!"
+Of course, that isn't a very useful thing to do. However, it is an
+example of how to output to the user using the ___3___ command, and
+produces a program which does something, so it is useful in that capacity.
+
+It may seem a bit odd to do something in a Turing complete language that
+can be done even more easily with an ___4___ file in a browser, but it's
+a step in learning ___2___ syntax, and that's really its purpose.'''
+
+answer1 = ["world", "Python", "print","HTML"]
 
 blanks_list = []
 for index in range(1, 6):
     blanks_list.append("___"+str(index)+"___")
 
 def word_in_blanks(word, blanks_list):
-    for blank in blanks_list:
-        if blank in word:
-            return blank
+#    for blank in blanks_list:
+#        if blank in word:
+#            return blank
+#    return None
+
+    index = 0
+    while index < len(blanks_list):
+    	if blanks_list[index] in word:
+    		return blanks_list[index]
+        index = index + 1 
     return None
 
-def play_game(sample, blanks_list): 
+def play_game(sample, answer, blanks_list): 
     print "\nThe current paragraph reads as such:"
-    print sample
+    print sample1
 
     replaced = []
     sample_list = sample.split()
@@ -57,6 +76,7 @@ def play_game(sample, blanks_list):
         replacement = word_in_blanks(word, blanks_list)
         if replacement != None:
             user_input = raw_input("\nWhat should be substituted in for " + replacement + " ?")
+            #if user_input == answer()
             word = word.replace(replacement, user_input)
             replaced.append(word)
             print "\nThe current paragraph reads as such:"
@@ -70,4 +90,4 @@ def play_game(sample, blanks_list):
     return replaced
 
 
-print play_game(sample, blanks_list)
+print play_game(sample1,answer1, blanks_list)
