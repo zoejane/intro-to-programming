@@ -21,6 +21,7 @@ The rubric that will be used is [here](https://review.udacity.com/?_ga=1.5224228
 ### Breaking Down the Problem
 The inputs are: 
 - quiz with blanks
+- blanks list
 - user's answer
 
 The outputs are:
@@ -35,7 +36,7 @@ The outputs are:
 Let's see if we can write an outline of what to do if we were to do this manually on pen and paper:  
 
 #### Version 1
-Every blanket could be answered one time.
+Every blanket replaced with user input.
 
 - Print the quiz
 - Loop through the blankets in the quiz
@@ -53,25 +54,49 @@ adding ___2___ separated by commas between the parentheses. ___1___s by default 
 don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
 tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
 
-blankets_list = ["___1___","___2___"...]
+---------
 
-blankets_list = []
-for index in range(1, 5):
-	blankets_list.append("___"+str(index)+"___")
-print blankets_list
+blanks_list = ["___1___","___2___"...]
+
+blanks_list = []
+for index in range(1, 6):
+	blanks_list.append("___"+str(index)+"___")
+print blanks_list
+
+---------
 
 user_input = raw_input("What should be substituted in for " + blanket + " ?")
 
+---------
+
 check if sample have words in blankets_list
 
-def word_in_blankets(word, blankets_list):
-	for blanket in blankets_list:
-	    if blanket in word:
-	        return blanket
+def word_in_blanks(word, blanks_list):
+	for blank in blanks_list:
+	    if blank in word:
+	        return blank
 	return None
 
-replace = []
-sample = sample.split()
-for word in sample:
-    blanket = 
+---------
+play a simple game
+split samle, loop through, and join again
+
+def play_game(sample, blanks_list): 
+    print sample
+
+    replaced = []
+    sample = sample.split()
+
+    for word in sample:
+        replacement = word_in_blanks(word, blanks_list)
+        if replacement != None:
+            user_input = raw_input("What should be substituted in for " + replacement + " ?")
+            word = word.replace(replacement, user_input)
+            replaced.append(word)
+        else:
+            replaced.append(word)
+	
+    replaced = " ".join(replaced)
+    return replaced
+    
 ```
