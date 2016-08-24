@@ -16,3 +16,47 @@ Your reviewer will also look at the Python code you've written and provide feedb
 - Each function includes a comment: Comments explain function behavior, inputs, and outputs (if applicable.)
 
 The rubric that will be used is [here](https://review.udacity.com/?_ga=1.52242285.53639439.1458784522#!/projects/3568138824/rubric).
+
+## My Thinking
+### Breaking Down the Problem
+The inputs are: 
+- quiz with blanks
+- user's answer
+
+The outputs are:
+- if right
+	- replace the quiz with answer
+	- move to next blank
+- if wrong
+	- tell user it's wrong and start the quiz again
+	- if failed too many time, game over
+
+### What To Do
+Let's see if we can write an outline of what to do if we were to do this manually on pen and paper:  
+
+#### Version 1
+Every blanket could be answered one time.
+
+- Print the quiz
+- Loop through the blankets in the quiz
+- Get user's input
+- Comparer user's input and the answer of the quiz
+	- if right: move to next blanket
+	- if wrong: end the game
+- Are we at the end of the loop? 
+	- Yes, you win.
+	- No, loop back.
+
+```
+sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
+adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
+don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
+tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
+
+blankets_list = ["___1___","___2___"...]
+
+blankets_list = []
+for index in range(1, 5):
+	blankets_list.append("___"+str(index)+"___")
+print blankets_list
+```
