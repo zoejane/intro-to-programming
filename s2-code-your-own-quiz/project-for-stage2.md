@@ -100,3 +100,16 @@ def play_game(sample, blanks_list):
     return replaced
     
 ```
+#### Version 2
+Make the Version 1's output like the demo
+
+```
+
+print "The current paragraph reads as such:"
+
+---------
+after every input, replace the blank, print it out
+
+print sample.replace(replacement,word)
+
+```

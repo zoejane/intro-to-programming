@@ -50,21 +50,29 @@ def word_in_blanks(word, blanks_list):
 print word_in_blanks("___1___",blanks_list)
 
 def play_game(sample, blanks_list): 
+    print "The current paragraph reads as such:"
     print sample
 
     replaced = []
-    sample = sample.split()
+    sample_list = sample.split()
 
-    for word in sample:
+    for word in sample_list:
         replacement = word_in_blanks(word, blanks_list)
         if replacement != None:
             user_input = raw_input("What should be substituted in for " + replacement + " ?")
             word = word.replace(replacement, user_input)
             replaced.append(word)
+            print sample.replace(replacement,word)
+
+
+
         else:
             replaced.append(word)
+
+
 	
     replaced = " ".join(replaced)
+    print "The current paragraph reads as such:"
     return replaced
 
 
