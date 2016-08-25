@@ -1,4 +1,7 @@
 # Project for Stage2
+## Resources
+[Rubric of stage2](https://review.udacity.com/?&_ga=1.241395910.53639439.1458784522#!/projects/3568138824/rubric)
+
 ## Tips
 [How can I return two values from a function in Python?](http://stackoverflow.com/questions/9752958/how-can-i-return-two-values-from-a-function-in-python)
 ```
@@ -37,6 +40,19 @@ The second is like this:
 inp = raw_input()       # Get the input
 while inp != "":        # Loop until it is a blank line
     inp = raw_input()   # Get the input again
+```
+
+[Getting an Integer Input in a Range](http://stackoverflow.com/questions/9437808/getting-an-integer-input-in-a-range)
+
+Check if the input is an int
+
+try/except will be perfect here:
+```
+n = raw_input('> ')
+try:
+    n = int(n)
+except ValueError:
+    catch_error() # or what you want
 ```
 
 ## Project Submission

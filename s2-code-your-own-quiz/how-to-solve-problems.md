@@ -115,3 +115,10 @@ That's one of the most important things to learn as a developer is to think of w
 
 ## Conclusion
 ![](http://7xsjcm.com1.z0.glb.clouddn.com/16-8-22/78082730.jpg)
+### Pythonista's Guide to All Problems in the Galaxy
+- Don't panic.
+- What are the input?
+- What are the output?
+- Work through some examples by hand
+- Simple mechanical Solution
+- Develop incrementally and test, as we go

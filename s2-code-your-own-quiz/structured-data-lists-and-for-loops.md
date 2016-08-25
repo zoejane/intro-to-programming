@@ -3,9 +3,12 @@
 ## Resources
 [Notes of Unit3](https://www.udacity.com/wiki/cs101/unit_3?_ga=1.18033789.53639439.1458784522)  
 Learn More: Loops  
+
 - [Video](http://bit.ly/1Ph3fiE)
-- [Transcript](http://discussions.udacity.com/t/stage-2-webcasts/16001/5?_ga=1.117713869.53639439.1458784522)
-Learn More: Create a Game with Python
+- [Transcript](http://discussions.udacity.com/t/stage-2-webcasts/16001/5?_ga=1.117713869.53639439.1458784522)  
+
+Learn More: Create a Game with Python  
+
 - [Video](http://bit.ly/1SAeOh9)
 - [Transcript](https://discussions.udacity.com/t/stage-2-webcasts/16001/10?_ga=1.8021878.53639439.1458784522)
 
