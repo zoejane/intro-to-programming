@@ -16,10 +16,10 @@
 # To help you get started, we've provided a sample paragraph that you can use when testing your code.
 # Your game should consist of 3 or more levels, so you should add your own paragraphs as well!
 
-sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
-adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
-don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
-tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
+#sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
+#adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
+#don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
+#tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
 
 # The answer for ___1___ is 'function'. Can you figure out the others?
 
@@ -35,6 +35,11 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd1-1/20min/
 
+sample0 = '''Hi, this is a program written by a programming language caled ___1___. 
+These days I am learning program in ___2___. '''
+
+answer0 = ["Python", "Udacity"]
+
 sample1 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
 is type in:
 ___3___ "Hello ___1___!"
@@ -48,16 +53,15 @@ a step in learning ___2___ syntax, and that's really its purpose.'''
 
 answer1 = ["world", "Python", "print","HTML"]
 
-blanks_list = []
-for index in range(1, 6):
-    blanks_list.append("___"+str(index)+"___")
+# A list of blanks(replacement words) to be passed in to the play game function. 
+def blanks_list(blank_numbers):
+    blanks_list= []
+    for index in range(1, blank_numbers + 1):
+        blanks_list.append("___"+str(index)+"___")
+    return blanks_list
 
+# Checks if a word in blanks_list is a substring of the word passed in.
 def word_in_blanks(word, blanks_list):
-#    for blank in blanks_list:
-#        if blank in word:
-#            return blank
-#    return None
-
     index = 0
     while index < len(blanks_list):
     	if blanks_list[index] in word:
@@ -65,7 +69,23 @@ def word_in_blanks(word, blanks_list):
         index = index + 1 
     return None, None
 
-def play_game(sample, answer, blanks_list): 
+def choose_mode():
+    print "Please select a game difficulty by typing it in!"
+    print "Possible choices include easy and hard."
+    mode = raw_input()
+    if mode == "easy":
+        return sample0,answer0, blanks_list(len(answer0))
+    if mode == "hard":
+        return sample1,answer1, blanks_list(len(answer1))
+    while (mode != "easy") and (mode != "hard"):
+        print "\nThat's not an option!"
+        print "Please select a game difficulty by typing it in! "
+        mode= raw_input()
+
+
+def play_game(): 
+    sample, answer, blanks_list = choose_mode()
+
     print "\nThe current paragraph reads as such:"
     print sample
     
@@ -80,7 +100,6 @@ def play_game(sample, answer, blanks_list):
             user_input = raw_input("\nWhat should be substituted in for " + replacement + " ?")
             if user_input == answer[blanks_index]:
                 word = word.replace(replacement, user_input)
-                replaced.append(word)
                 print "\nCorrect!\n\nThe current paragraph reads as such:"
                 sample = sample.replace(replacement,word,1)
                 print sample
@@ -96,7 +115,7 @@ def play_game(sample, answer, blanks_list):
                     return "You've failed too many straight guesses!  Game over!"
 
     
-    return "You won!"
+    return "\nYou won!"
 
 
-print play_game(sample1,answer1, blanks_list)
+print play_game()

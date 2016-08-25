@@ -165,3 +165,19 @@ else:
 
 ```
 
+#### Version 5
+add choose mode
+
+```
+def choose_mode():
+    print "Please select a game difficulty by typing it in!"
+    print "Possible choices include easy and hard."
+    mode = raw_input()
+    while (mode != "easy") and (mode != "hard"):
+        print "\nThat's not an option!"
+        print "Please select a game difficulty by typing it in!\n "
+    if mode == "easy":
+       return sample0,answer0, blanks_list(len(answer0))
+    if mode == "hard":
+        return sample1,answer1, blanks_list(len(answer1))
+```
