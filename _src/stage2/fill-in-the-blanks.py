@@ -78,16 +78,17 @@ def choose_mode():
     print "Possible choices include easy, medium and hard."
     #mode = "easy"
     mode = raw_input()
+    while (mode != "easy") and (mode != "medium") and (mode != "hard"):
+        print "\nThat's not an option!"
+        print "Please select a game difficulty by typing it in! "
+        mode= raw_input()
     if mode == "easy":
         return sample0,answer0, blanks_list(len(answer0))
     if mode == "medium":
         return sample1,answer1, blanks_list(len(answer1))
     if mode == "hard":
         return sample2,answer2, blanks_list(len(answer2))
-    while (mode != "easy") and (mode != "medium") and (mode != "hard"):
-        print "\nThat's not an option!"
-        print "Please select a game difficulty by typing it in! "
-        mode= raw_input()
+    
 
 
 def play_game(): 
