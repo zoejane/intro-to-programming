@@ -70,7 +70,8 @@ def play_game(sample, answer, blanks_list):
     print sample
     
     sample_list = sample.split()
-    guess = 0
+    guess_count = 0
+    guess = 5
 
     for word in sample_list:
         replacement, blanks_index = word_in_blanks(word, blanks_list)
@@ -85,10 +86,10 @@ def play_game(sample, answer, blanks_list):
                 print sample
                 #print sample.replace(replacement,word)
             else:
-                guess += 1
-                if guess < 5:                       
+                guess_count += 1
+                if guess_count < guess:                       
                     print "That isn't the correct answer!Let's try again; you have " \
-                    + str(5 - guess) \
+                    + str(guess - guess_count) \
                     +" trys left!\n\n\nThe current paragraph reads as such:"
                     print sample
                 else:

@@ -148,3 +148,20 @@ answer1 = ["world", "Python", "print","HTML"]
 
 #### Version 4
 add 5 tries to user's guess
+
+```
+guess = 0
+
+...
+
+guess += 1
+if guess < 5:                       
+    print "That isn't the correct answer!Let's try again; you have " \
+    + str(5 - guess) \
+    +" trys left!\n\n\nThe current paragraph reads as such:"
+    print sample
+else:
+    return "You've failed too many straight guesses!  Game over!"
+
+```
+
