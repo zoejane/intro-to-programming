@@ -1,50 +1,17 @@
-# IPND Stage 2 Final Project
+# IPND Stage 2 Final Project 
+# by Zoe Jane
+# Email:  dadac123@gmail.com
+# GitHub: https://github.com/zoejane
 
-# You've built a Mad-Libs game with some help from Sean.
-# Now you'll work on your own game to practice your skills and demonstrate what you've learned.
-
-# For this project, you'll be building a Fill-in-the-Blanks quiz.
-# Your quiz will prompt a user with a paragraph containing several blanks.
-# The user should then be asked to fill in each blank appropriately to complete the paragraph.
-# This can be used as a study tool to help you remember important vocabulary!
-
-# Note: Your game will have to accept user input so, like the Mad Libs generator,
-# you won't be able to run it using Sublime's `Build` feature.
-# Instead you'll need to run the program in Terminal or IDLE.
-# Refer to Work Session 5 if you need a refresher on how to do this.
-
-# To help you get started, we've provided a sample paragraph that you can use when testing your code.
-# Your game should consist of 3 or more levels, so you should add your own paragraphs as well!
-
-#sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
-#adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
-#don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
-#tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
-
-# The answer for ___1___ is 'function'. Can you figure out the others?
-
-# We've also given you a file called fill-in-the-blanks.pyc which is a working version of the project.
-# A .pyc file is a Python file that has been translated into "byte code".
-# This means the code will run the same as the original .py file, but when you open it
-# it won't look like Python code! But you can run it just like a regular Python file
-# to see how your code should behave.
-
-# Hint: It might help to think about how this project relates to the Mad Libs generator you built with Sean.
-# In the Mad Libs generator, you take a paragraph and replace all instances of NOUN and VERB.
-# How can you adapt that design to work with numbered blanks?
-
-# If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd1-1/20min/
-
-sample0 = '''A ___1___ is created with the def keyword.'''
-
+# Create quiz and answer for different mode.
+quiz0 = '''A ___1___ is created with the def keyword.'''
 answer0 = ["function"]
 
-sample1 = '''Hi, this is a program written by a programming language called ___1___. 
+quiz1 = '''Hi, this is a program written by a programming language called ___1___. 
 These days I am learning program in ___2___. '''
-
 answer1 = ["Python", "Udacity"]
 
-sample2 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
+quiz2 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
 is type in:
 ___3___ "Hello ___1___!"
 Of course, that isn't a very useful thing to do. However, it is an
@@ -54,17 +21,19 @@ produces a program which does something, so it is useful in that capacity.
 It may seem a bit odd to do something in a Turing complete language that
 can be done even more easily with an ___4___ file in a browser, but it's
 a step in learning ___2___ syntax, and that's really its purpose.'''
-
 answer2 = ["world", "Python", "print","HTML"]
 
-# A list of blanks(replacement words) to be passed in to the play game function. 
-def blanks_list(blank_numbers):
+# A list of blanks(which need users to fill in) to be passed in to the play game function. 
+# The blanks depend on how many answers in our quiz.
+def blanks_list(answer):
     blanks_list= []
+    blank_numbers = len(answer)
+
     for index in range(1, blank_numbers + 1):
         blanks_list.append("___"+str(index)+"___")
     return blanks_list
 
-# Checks if a word in blanks_list is a substring of the word passed in.
+# Checks if the blank in blanks_list is a substring of the word passed in.
 def word_in_blanks(word, blanks_list):
     index = 0
     while index < len(blanks_list):
@@ -73,81 +42,75 @@ def word_in_blanks(word, blanks_list):
         index = index + 1 
     return None, None
 
+# Let users choose different game mode.
 def choose_mode():
     print "Please select a game difficulty by typing it in!"
     print "Possible choices include easy, medium and hard."
-    mode = "medium"
-    #mode = raw_input()
+
+    mode = raw_input()
+    
+    # Loop until we get a valid input.
     while (mode != "easy") and (mode != "medium") and (mode != "hard"):
         print "\nThat's not an option!"
         print "Please select a game difficulty by typing it in! "
         mode= raw_input()
+
     if mode == "easy":
-        return sample0,answer0, blanks_list(len(answer0))
+        return quiz0, answer0, blanks_list(answer0)
     if mode == "medium":
-        return sample1,answer1, blanks_list(len(answer1))
+        return quiz1, answer1, blanks_list(answer1)
     if mode == "hard":
-        return sample2,answer2, blanks_list(len(answer2))
+        return quiz2, answer2, blanks_list(answer2)
     
 
-
+# Play a full game of Fill-in-the-Blanks quiz. 
+# After the user choose a game mode, it will show a quiz with blanks.
+# The user be asked to fill in each blank appropriately.
 def play_game(): 
-    sample, answer, blanks_list = choose_mode()
+
+	# After the user choose a mode, 
+	# the program prepare for the quiz, answer, blank_list. 
+    quiz, answer, blanks_list = choose_mode()
 
     print "\nThe current paragraph reads as such:"
-    print sample
+    print quiz
     
-    sample_list = sample.split()
-    guess_count = 0
-    guess = 5
+    # Split the words in quiz. 
+    # It helps to find the blanks need to be filled in quiz.
+    quiz_list = quiz.split()
 
-    for word in sample_list:
-    #index = 0
-    #while index < len(sample_list):
-    	#word = sample_list[index]
+    # Users could guess 5 times.
+    guess = 5
+    guess_count = 0
+
+    for word in quiz_list:
         blank_now, blanks_index = word_in_blanks(word, blanks_list)
         
+        # if this is a blank need user to fill in
         if blank_now != None:
- 
             user_input = raw_input("\nWhat should be substituted in for " + blank_now + " ?")
             
-            while user_input != answer[blanks_index]:
-
+            # Loop until we get the correct answer(case-insensitive). 
+            while (user_input.lower()) != (answer[blanks_index].lower()):
+            	# if we still have guess times
                 if guess_count < guess:                       
                     print "That isn't the correct answer!Let's try again; you have " \
                     + str(guess - guess_count) \
                     +" trys left!\n\n\nThe current paragraph reads as such:"
-                    print sample
-                    user_input = raw_input()
-                    
-
+                    print quiz
+                    user_input = user_input = raw_input("\nWhat should be substituted in for " + blank_now + " ?")
+                    guess_count += 1
+                # if we don't have guess times
                 else:
                     return "You've failed too many straight guesses!  Game over!"
-                guess_count += 1
-
-            if user_input == answer[blanks_index]:
-                word = word.replace(blank_now, user_input)
-                print "\nCorrect!\n\nThe current paragraph reads as such:"
-                sample = sample.replace(blank_now,answer[blanks_index],1)
-                print sample
-
-
-                #print sample.replace(replacement,word)
-                #index += 1
-            #else:
-                #guess_count += 1
-                #if guess_count < guess:                       
-                    #print "That isn't the correct answer!Let's try again; you have " \
-                    #+ str(guess - guess_count) \
-                    #+" trys left!\n\n\nThe current paragraph reads as such:"
-                    #print sample
-
-
-                #else:
-                    #return "You've failed too many straight guesses!  Game over!"
-        #index = index + 1
-    
+                
+            # Now, users answer correct.
+            # user_input == answer[blanks_index]
+            print "\nCorrect!\n\nThe current paragraph reads as such:"
+            # Replace the blank with answer, and print the quiz again.
+            quiz = quiz.replace(blank_now,answer[blanks_index],1)
+            print quiz
+    # We already loop through every words in quiz.        
     return "\nYou won!"
-
 
 print play_game()

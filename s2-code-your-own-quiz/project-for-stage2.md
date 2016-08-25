@@ -14,9 +14,30 @@ my_i, my_card = select_choice()
 text = text.replace("very", "not very", 1)
 ```
 
+Note that if you are on Python 3.x, you will need to replace raw_input with input.
+
+
 The third parameter is the maximum number of occurrences that you want to replace. From the document of python:
 
 string.replace(s, old, new[, maxreplace]) Return a copy of string s with all occurrences of substring old replaced by new. If the optional argument maxreplace is given, the first maxreplace occurrences are replaced.
+
+[Python: How to keep repeating a program until a specific input is obtained?](http://stackoverflow.com/questions/20337489/python-how-to-keep-repeating-a-program-until-a-specific-input-is-obtained)
+
+There are two ways to do this. First is like this:
+
+```
+while True:             # Loop continuously
+    inp = raw_input()   # Get the input
+    if inp == "":       # If it is a blank line...
+        break           # ...break the loop
+```
+
+The second is like this:
+```
+inp = raw_input()       # Get the input
+while inp != "":        # Loop until it is a blank line
+    inp = raw_input()   # Get the input again
+```
 
 ## Project Submission
 
