@@ -35,12 +35,16 @@
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd1-1/20min/
 
-sample0 = '''Hi, this is a program written by a programming language caled ___1___. 
+sample0 = '''A ___1___ is created with the def keyword.'''
+
+answer0 = ["function"]
+
+sample1 = '''Hi, this is a program written by a programming language called ___1___. 
 These days I am learning program in ___2___. '''
 
-answer0 = ["Python", "Udacity"]
+answer1 = ["Python", "Udacity"]
 
-sample1 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
+sample2 = '''Hello ___1___!'  In ___2___ this is particularly easy; all you have to do
 is type in:
 ___3___ "Hello ___1___!"
 Of course, that isn't a very useful thing to do. However, it is an
@@ -51,7 +55,7 @@ It may seem a bit odd to do something in a Turing complete language that
 can be done even more easily with an ___4___ file in a browser, but it's
 a step in learning ___2___ syntax, and that's really its purpose.'''
 
-answer1 = ["world", "Python", "print","HTML"]
+answer2 = ["world", "Python", "print","HTML"]
 
 # A list of blanks(replacement words) to be passed in to the play game function. 
 def blanks_list(blank_numbers):
@@ -71,13 +75,16 @@ def word_in_blanks(word, blanks_list):
 
 def choose_mode():
     print "Please select a game difficulty by typing it in!"
-    print "Possible choices include easy and hard."
+    print "Possible choices include easy, medium and hard."
+    #mode = "easy"
     mode = raw_input()
     if mode == "easy":
         return sample0,answer0, blanks_list(len(answer0))
-    if mode == "hard":
+    if mode == "medium":
         return sample1,answer1, blanks_list(len(answer1))
-    while (mode != "easy") and (mode != "hard"):
+    if mode == "hard":
+        return sample2,answer2, blanks_list(len(answer2))
+    while (mode != "easy") and (mode != "medium") and (mode != "hard"):
         print "\nThat's not an option!"
         print "Please select a game difficulty by typing it in! "
         mode= raw_input()
@@ -94,6 +101,9 @@ def play_game():
     guess = 5
 
     for word in sample_list:
+    #index = 0
+    #while index < len(sample_list):
+    	#word = sample_list[index]
         replacement, blanks_index = word_in_blanks(word, blanks_list)
         
         if replacement != None:
@@ -101,9 +111,12 @@ def play_game():
             if user_input == answer[blanks_index]:
                 word = word.replace(replacement, user_input)
                 print "\nCorrect!\n\nThe current paragraph reads as such:"
-                sample = sample.replace(replacement,word,1)
+                sample = sample.replace(replacement,answer[blanks_index],1)
                 print sample
+
+
                 #print sample.replace(replacement,word)
+                #index += 1
             else:
                 guess_count += 1
                 if guess_count < guess:                       
@@ -111,9 +124,11 @@ def play_game():
                     + str(guess - guess_count) \
                     +" trys left!\n\n\nThe current paragraph reads as such:"
                     print sample
+
+
                 else:
                     return "You've failed too many straight guesses!  Game over!"
-
+        #index = index + 1
     
     return "\nYou won!"
 
