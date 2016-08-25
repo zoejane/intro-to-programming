@@ -76,8 +76,8 @@ def word_in_blanks(word, blanks_list):
 def choose_mode():
     print "Please select a game difficulty by typing it in!"
     print "Possible choices include easy, medium and hard."
-    #mode = "easy"
-    mode = raw_input()
+    mode = "medium"
+    #mode = raw_input()
     while (mode != "easy") and (mode != "medium") and (mode != "hard"):
         print "\nThat's not an option!"
         print "Please select a game difficulty by typing it in! "
@@ -105,30 +105,46 @@ def play_game():
     #index = 0
     #while index < len(sample_list):
     	#word = sample_list[index]
-        replacement, blanks_index = word_in_blanks(word, blanks_list)
+        blank_now, blanks_index = word_in_blanks(word, blanks_list)
         
-        if replacement != None:
-            user_input = raw_input("\nWhat should be substituted in for " + replacement + " ?")
-            if user_input == answer[blanks_index]:
-                word = word.replace(replacement, user_input)
-                print "\nCorrect!\n\nThe current paragraph reads as such:"
-                sample = sample.replace(replacement,answer[blanks_index],1)
-                print sample
+        if blank_now != None:
+ 
+            user_input = raw_input("\nWhat should be substituted in for " + blank_now + " ?")
+            
+            while user_input != answer[blanks_index]:
 
-
-                #print sample.replace(replacement,word)
-                #index += 1
-            else:
-                guess_count += 1
                 if guess_count < guess:                       
                     print "That isn't the correct answer!Let's try again; you have " \
                     + str(guess - guess_count) \
                     +" trys left!\n\n\nThe current paragraph reads as such:"
                     print sample
-
+                    user_input = raw_input()
+                    
 
                 else:
                     return "You've failed too many straight guesses!  Game over!"
+                guess_count += 1
+
+            if user_input == answer[blanks_index]:
+                word = word.replace(blank_now, user_input)
+                print "\nCorrect!\n\nThe current paragraph reads as such:"
+                sample = sample.replace(blank_now,answer[blanks_index],1)
+                print sample
+
+
+                #print sample.replace(replacement,word)
+                #index += 1
+            #else:
+                #guess_count += 1
+                #if guess_count < guess:                       
+                    #print "That isn't the correct answer!Let's try again; you have " \
+                    #+ str(guess - guess_count) \
+                    #+" trys left!\n\n\nThe current paragraph reads as such:"
+                    #print sample
+
+
+                #else:
+                    #return "You've failed too many straight guesses!  Game over!"
         #index = index + 1
     
     return "\nYou won!"
