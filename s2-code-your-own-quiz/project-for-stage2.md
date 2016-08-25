@@ -145,3 +145,6 @@ add answer to def play_game(sample, answer, blanks_list)
 answer1 = ["world", "Python", "print","HTML"]
 
 ```
+
+#### Version 4
+add 5 tries to user's guess

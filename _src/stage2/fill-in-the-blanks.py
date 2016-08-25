@@ -67,13 +67,13 @@ def word_in_blanks(word, blanks_list):
 
 def play_game(sample, answer, blanks_list): 
     print "\nThe current paragraph reads as such:"
-    print sample1
-
-    replaced = []
+    print sample
+    
     sample_list = sample.split()
 
     for word in sample_list:
         replacement, blanks_index = word_in_blanks(word, blanks_list)
+        guess = 0
         if replacement != None:
             user_input = raw_input("\nWhat should be substituted in for " + replacement + " ?")
             if user_input == answer[blanks_index]:
@@ -83,16 +83,15 @@ def play_game(sample, answer, blanks_list):
                 sample = sample.replace(replacement,word,1)
                 print sample
                 #print sample.replace(replacement,word)
-            else:
-            	return "You've failed too many straight guesses!  Game over!"
+            else:                  
+                print "That isn't the correct answer!Let's try again; you have " \
+                + str(5-guess) \
+                +" trys left!\n\n\nThe current paragraph reads as such:"
+            	print sample
+            	guess += 1
+        #return "You've failed too many straight guesses!  Game over!"
 
-
-
-        else:
-            replaced.append(word)
-	
-    replaced = " ".join(replaced)
-    print "\nThe current paragraph reads as such:"
+    
     return "You won!"
 
 
