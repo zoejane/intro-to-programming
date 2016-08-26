@@ -109,8 +109,6 @@ def play_game():
     # It helps to find the blanks need to be filled in quiz.
     quiz_list = quiz.split()
 
-
-
     for word in quiz_list:
         blank_now, blanks_index = word_in_blanks(word, blanks_list)
         
@@ -136,7 +134,7 @@ def play_game():
             print "\nCorrect!\n\nThe current paragraph reads as such:"
             # Replace the blank(only the blank users filling in now) with answer, 
             # and print the quiz again.
-            quiz = quiz.replace(blank_now,answer[blanks_index],1)
+            quiz = quiz.replace(blank_now, answer[blanks_index], 1)
             print quiz
 
     # We already loop through every word in quiz.        
