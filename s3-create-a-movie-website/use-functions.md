@@ -34,3 +34,6 @@ Now this idea of abstraction is a really powerful one in programming, because it
 
 ## Enhancing the Take a Break Project
 If you truly want to learn something, teach it to someone else.
+
+## When Functions Do Not Suffice
+What we really wanna do is define a template for our movie and record
