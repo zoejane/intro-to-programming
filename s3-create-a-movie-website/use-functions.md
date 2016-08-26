@@ -28,6 +28,11 @@ Video: Renaming Files
 
 [Exceptions.](http://www.tutorialspoint.com/python/python_exceptions.htm)
 
+Change Turtle Shape, Color, And Speed
+1) [Changing Turtle's Shape](http://docs.python.org/2/library/turtle.html#turtle.shape)
+2) [Changing Turtle's Color](http://docs.python.org/2/library/turtle.html#turtle.color)
+3) [Changing Turtle's Speed](http://docs.python.org/2/library/turtle.html#turtle.speed)
+
 ## Where Does Webbrowser Come From?
 That detail is hidden from us, and this hiding of detail in programming is called **abstraction**.  
 Now this idea of abstraction is a really powerful one in programming, because it allows us to focus on the program that we actually want to write which is the take a break program, and it empowers us to use these functions simply by **reading their documentation**.
@@ -36,4 +41,4 @@ Now this idea of abstraction is a really powerful one in programming, because it
 If you truly want to learn something, teach it to someone else.
 
 ## When Functions Do Not Suffice
-What we really wanna do is define a template for our movie and record
+What we really wanna do is define a template for our movie and record all of the data that needs to go into that template. -> class
