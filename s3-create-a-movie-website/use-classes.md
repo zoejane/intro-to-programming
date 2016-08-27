@@ -2,6 +2,12 @@
 ## Resources
 You can find the most download Python packages on the [PyPI Ranking page](http://pypi-ranking.info/alltime)
 [[https://pypi.python.org/pypi](https://pypi.python.org/pypi)](https://pypi.python.org/pypi)
+[Your Twilio Account Page](https://www.twilio.com/user/account)
+
+Investigating The Code
+
+- [How does Python Keyword from work](http://www.tutorialspoint.com/python/python_modules.htm)
+- [Read the actual Twilio code on Github](https://github.com/twilio/twilio-python)
 
 ## What Is a Class?
 Kunal notes, starting at 0:48, the following: "A class Turtle, much like a blueprint, contains certain pieces of information about a turtle: the turtle's size, its color, the fact that the Turtle can move forward..."
