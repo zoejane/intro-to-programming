@@ -13,7 +13,7 @@ def draw_art():
 	brad.shape("turtle")
 	brad.color("yellow")
 	brad.speed(2)
-	for i in range(0,4):
+	for i in range(0,36):
 		draw_square(brad)
 		brad.right(10)
 
