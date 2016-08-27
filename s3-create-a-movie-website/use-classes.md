@@ -9,6 +9,16 @@ Investigating The Code
 - [How does Python Keyword from work](http://www.tutorialspoint.com/python/python_modules.htm)
 - [Read the actual Twilio code on Github](https://github.com/twilio/twilio-python)
 
+[Documentation for built-in function open](https://docs.python.org/2/library/functions.html#open)
+
+Checking For Curse Words
+1) Using What Do You Love to check curse words
+
+http://www.wdylike.appspot.com/?q=shot
+2) In case you are curious about the things we are adding after the ? in the link or URL 
+
+http://en.wikipedia.org/wiki/Query_string
+
 ## What Is a Class?
 Kunal notes, starting at 0:48, the following: "A class Turtle, much like a blueprint, contains certain pieces of information about a turtle: the turtle's size, its color, the fact that the Turtle can move forward..."
 
