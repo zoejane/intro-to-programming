@@ -19,6 +19,14 @@ http://www.wdylike.appspot.com/?q=shot
 
 http://en.wikipedia.org/wiki/Query_string
 
+Profanity Editor Mini-Project
+Links to websites you can use in the mini-project
+1) What Do You Love - http://www.wdyl.com/profanity?q=shot
+(this website will help detect curse words in a text)
+
+2) Pirate speech - http://isithackday.com/arrpi.php?text=friend
+(this website will convert normal text into Pirate speech
+
 ## What Is a Class?
 Kunal notes, starting at 0:48, the following: "A class Turtle, much like a blueprint, contains certain pieces of information about a turtle: the turtle's size, its color, the fact that the Turtle can move forward..."
 
