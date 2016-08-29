@@ -38,3 +38,6 @@ Use triple codes, to define my documentation.(create documentation for multiple 
 class Movie():
 	"""This is class provides a way to sotre movie related information"""
 ```
+
+## Inheritance
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-8-29/93521916.jpg)
