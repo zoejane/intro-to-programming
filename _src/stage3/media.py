@@ -1,7 +1,7 @@
 import webbrowser
 
 class Movie():
-	"""This is class provides a way to sotre movie related information"""
+	"""This is class provides a way to store movie related information"""
 	
 	VALID_RATINGS = ["G", "PG", "PG13", "R"]
 
