@@ -40,3 +40,4 @@ Don't worry if you aren't familiar with CSS classes. The main point here is that
 
 ## Using .Append() To Build A Page
 ![](http://7xsjcm.com1.z0.glb.clouddn.com/16-9-2/30227710.jpg)
+```$("#main").append("Charlie Chaplin");.```
