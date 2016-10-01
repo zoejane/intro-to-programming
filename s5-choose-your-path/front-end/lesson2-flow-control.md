@@ -12,3 +12,34 @@ Check the [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equalit
 According to Jacques Favreau, the lead front-end engineer at Udacity, you should never use ==. It's a frequent source of bugs. In fact, if a Udacity engineer tries to commit code with ==, it automatically gets rejected.  
 
 Though it wasn't mentioned in the video, the same conditions apply for strict inequality (!==) and loose inequality (!=). Loose inequality is more forgiving than loose equality so you might not see strict inequality as often.
+
+### Skills not displaying in resume?
+This if statement in index.html prevents anything from displaying within the #header element when there is no h1 element in the document.
+```
+    if (document.getElementsByTagName('h1').length === 0) {
+        document.getElementById('header').style.display = 'none';
+    }
+```
+The following variable in the helper.js file contains an h1 element:
+
+```var HTMLheaderName = '<h1 id="name">%data%</h1>';```
+
+If the %data% substring in the HTMLheaderName variable is replaced with the bio.name property and the result is appended to the #header element, skills can then appear because the if statement in index.html will no longer be true.
+
+## While Loops
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-10-1/93958310.jpg)
+
+## For Loops
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-10-1/1677945.jpg)
+
+## For-In Loops
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-10-1/888029.jpg)
+
+## A Note About For-In Loops
+Now that you've learned about for-in loops, it's time to stop using them. No, seriously. for-in loops are considered to be general bad practice when writing JavaScript because it has some inconsistent behavior with arrays and objects. Check out these links for more:
+
+- [http://stackoverflow.com/questions/500504/why-is-using-for-in-with-array-iteration-a-bad-idea](http://stackoverflow.com/questions/500504/why-is-using-for-in-with-array-iteration-a-bad-idea)
+- [http://stackoverflow.com/questions/4261051/javascript-why-for-in-is-a-bad-practice](http://stackoverflow.com/questions/4261051/javascript-why-for-in-is-a-bad-practice)
+-[https://websanova.com/blog/javascript/why-javascript-for-in-loops-are-bad](https://websanova.com/blog/javascript/why-javascript-for-in-loops-are-bad)
+
+For the Online Resume project, you will be asked to demonstrate the current best practices and should not use any for-in loops. Please use either a standard for loop or the [forEach loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) instead.

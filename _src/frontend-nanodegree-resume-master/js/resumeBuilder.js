@@ -135,71 +135,9 @@ var education = {
 	]
 }
  */
-var work = {
- 	"jobs": [
- 	{
- 		"employer": "Udacity",
- 		"title": "learner",
- 		"location": "online",
- 		"dates":2016,
- 		"description": "Learning at Udacity"
- 	}
- 	]
- };
 
-var project = {
- 	"projects": [
- 	{
- 		"title": "Movie Website",
- 		"dates":2016,
- 		"description": "Using Python and HTML/CSS",
- 		"images": ["images/project1.jpg"]
- 	},
- 	{
- 		"title": "Resume",
- 		"dates": 2016,
- 		"description": "Using JavaScript",
- 		"images": ["images/project2.jpg"]
- 	}
- 	]
 
- };
-
-var bio = {
- 	"name": "Zoe Jane",
- 	"role": "learner",
- 	"welcomeMessage": "Hello world!",
- 	"biopic": "images/me.png",
- 	"contacts": {
- 		"mobile":"123456",
- 		"email": "dadac123@gmail.com",
- 		"github": "zoejane",
- 		"twitter": "@dadac123",
- 		"location":  "China"
- 	},
- 	"skills": ["programming","writing"]
- };
-
-var education = {
- 	"schools": [
- 	{
- 		"name": "CSUST",
- 		"location": "Changsha, China",
- 		"degree dates":2013,
- 		"url": "http://example.com",
- 		"major":["GIS","Finance"]
- 	}
- 	],
- 	"onlineCourses": [
- 	{
- 		"title":"Intro to Programming",
- 		"school":"Udacity",
- 		"dates":2016,
- 		"url": "http://www.udacity.com"
- 	}
- 	]
- };
-
+/*
 var awesomeThoughts = "I am Zoe Jane and I am AWESOME!"
 console.log(awesomeThoughts);
 
@@ -260,3 +198,148 @@ var education = {
 
 $("#main").append(education.schools[0].name);
 $("#main").append(education.onlineCourses[0].name);
+*/
+
+var work = {
+ 	"jobs": [
+ 	{
+ 		"employer": "Udacity",
+ 		"title": "learner",
+ 		"location": "online",
+ 		"dates":2016,
+ 		"description": "Learning at Udacity"
+ 	},
+ 	{
+ 		"employer": "Udacity",
+ 		"title": "thinker",
+ 		"location": "online",
+ 		"dates":2016,
+ 		"description": "Learning at Udacity"
+ 	}
+ 	]
+ }
+
+var project = {
+ 	"projects": [
+ 	{
+ 		"title": "Movie Website",
+ 		"dates":2016,
+ 		"description": "Using Python and HTML/CSS",
+ 		"images": ["images/project1.jpg"]
+ 	},
+ 	{
+ 		"title": "Resume",
+ 		"dates": 2016,
+ 		"description": "Using JavaScript",
+ 		"images": ["images/project2.jpg"]
+ 	}
+ 	]
+
+ }
+
+var bio = {
+ 	"name": "Zoe Jane",
+ 	"role": "learner",
+ 	"welcomeMessage": "Hello world!",
+ 	"biopic": "images/me.png",
+ 	"contacts": {
+ 		"mobile":"123456",
+ 		"email": "dadac123@gmail.com",
+ 		"github": "zoejane",
+ 		"twitter": "@dadac123",
+ 		"location":  "China"
+ 	},
+ 	"skills": ["programming","writing","music"]
+ }
+
+var education = {
+ 	"schools": [
+ 	{
+ 		"name": "CSUST",
+ 		"location": "Changsha, China",
+ 		"degree dates":2013,
+ 		"url": "http://example.com",
+ 		"major":["GIS","Finance"]
+ 	}
+ 	],
+ 	"onlineCourses": [
+ 	{
+ 		"title":"Intro to Programming",
+ 		"school":"Udacity",
+ 		"dates":2016,
+ 		"url": "http://www.udacity.com"
+ 	}
+ 	]
+ }
+
+var formattedName = HTMLheaderName.replace("%data%",bio.name);
+$("#header").append(formattedName);
+
+if(bio.skills.length > 0) {
+	
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
+	$("#skills").append(formattedSkill);
+ }
+
+/*
+var cameron = {};
+cameron.job = "course dev";
+
+var makeCourse = function(){
+	// make a course
+	console.log("Made a course");
+}
+
+var courses = 0;
+while(cameron.job === "course dev"){
+	makeCourse();
+	courses = courses + 1;
+	if(courses === 10){
+		cameron.job = "learning specialist";
+	}
+
+}console.log(cameron.job);
+
+for(var i=0; i<9; i++){
+	console.log(i);
+}
+
+var countries = ["Germany", "Brazil", "China"];
+for(country in countries){
+	console.log(countries[country]);
+}
+*/
+
+for(job in work.jobs){
+	console.log(work.jobs[job].title);
+	$("#workExperience").append(HTMLworkStart);
+
+	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
+	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
+	var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+	var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+
+	$(".work-entry:last").append(formattedLocation);
+	$(".work-entry:last").append(formattedDates);
+	$(".work-entry:last").append(formattedDescription);
+
+
+
+
+
+
+
+}
