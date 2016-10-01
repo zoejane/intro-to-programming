@@ -43,3 +43,26 @@ Now that you've learned about for-in loops, it's time to stop using them. No, se
 -[https://websanova.com/blog/javascript/why-javascript-for-in-loops-are-bad](https://websanova.com/blog/javascript/why-javascript-for-in-loops-are-bad)
 
 For the Online Resume project, you will be asked to demonstrate the current best practices and should not use any for-in loops. Please use either a standard for loop or the [forEach loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) instead.
+
+## Functions
+More on [spaghetti](http://en.wikibooks.org/wiki/General_Astronomy/Spaghettification) if you're interested!
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-10-1/83026236.jpg)
+
+## Click Metrics
+Want to learn about scope? [article from Todd Motto](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/) is a fantastic introduction.
+
+## Collecting Click Locations
+Here's the code shell for you:
+
+```
+$(document).click(function(loc) {
+  // your code goes here
+});
+```
+
+### ```$(document).click()```
+```$(document).click()``` is a jQuery event handler on the page, which is a fancy way of saying that it will hold some code that runs every time a user clicks on the page. The function (that doesn't have a name, making it an anonymous function) that gets passed into ```.click()``` will be run every time a user clicks on the page. 
+
+### loc 
+loc is a jQuery event object that contains information about the click event. Learn about event's properties with [jQuery's documentation](http://api.jquery.com/category/events/event-object/).
+

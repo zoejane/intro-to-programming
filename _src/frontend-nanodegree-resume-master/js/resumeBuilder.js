@@ -200,6 +200,7 @@ $("#main").append(education.schools[0].name);
 $("#main").append(education.onlineCourses[0].name);
 */
 
+/*
 var work = {
  	"jobs": [
  	{
@@ -218,6 +219,39 @@ var work = {
  	}
  	]
  }
+*/
+var work = {
+  "jobs": [
+    {
+      "employer": "Udacity",
+      "title": "Course Developer",
+      "location": "Mountain View, CA",
+      "dates": "Feb 2014 - Current",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LearnBIG",
+      "title": "Software Engineer",
+      "location": "Seattle, WA",
+      "dates": "May 2013 - Jan 2014",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LEAD Academy Charter High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jul 2012 - May 2013",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "Stratford High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jun 2009 - Jun 2012",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    }
+  ]
+};
 
 var project = {
  	"projects": [
@@ -318,6 +352,7 @@ for(country in countries){
 }
 */
 
+function displayWork(){
 for(job in work.jobs){
 	console.log(work.jobs[job].title);
 	$("#workExperience").append(HTMLworkStart);
@@ -335,11 +370,16 @@ for(job in work.jobs){
 	$(".work-entry:last").append(formattedLocation);
 	$(".work-entry:last").append(formattedDates);
 	$(".work-entry:last").append(formattedDescription);
-
-
-
-
-
-
+}
 
 }
+
+displayWork();
+
+$(document).click(function(loc) {
+  // your code goes here
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
+});
