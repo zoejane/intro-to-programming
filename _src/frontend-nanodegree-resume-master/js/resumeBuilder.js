@@ -383,3 +383,32 @@ $(document).click(function(loc) {
 
   logClicks(x,y);
 });
+
+function locationizer(work_obj){
+	var locationArray = [];
+
+	for (job in work_obj.jobs){
+		var newLocation = work_obj.jobs[job].location;
+		locationArray.push(newLocation);
+	}
+
+	return locationArray;
+}
+
+console.log(locationizer(work));
+
+var name = bio.name;
+
+function inName(oldName) {
+    var finalName = oldName;
+    // Your code goes here!
+    position = finalName.search(' ')
+    //console.log(position)
+    finalName = finalName[0].toUpperCase()
+    +finalName.slice(1,position).toLowerCase()
+    +finalName.slice(position).toUpperCase()
+
+    return finalName;
+};
+
+$("#main").append(internationalizeButton);
