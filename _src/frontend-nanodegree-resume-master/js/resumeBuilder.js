@@ -135,7 +135,7 @@ var education = {
 	]
 }
  */
- var work = {
+var work = {
  	"jobs": [
  	{
  		"employer": "Udacity",
@@ -147,7 +147,7 @@ var education = {
  	]
  };
 
- var project = {
+var project = {
  	"projects": [
  	{
  		"title": "Movie Website",
@@ -165,7 +165,7 @@ var education = {
 
  };
 
- var bio = {
+var bio = {
  	"name": "Zoe Jane",
  	"role": "learner",
  	"welcomeMessage": "Hello world!",
@@ -180,7 +180,7 @@ var education = {
  	"skills": ["programming","writing"]
  };
 
- var education = {
+var education = {
  	"schools": [
  	{
  		"name": "CSUST",
@@ -199,3 +199,64 @@ var education = {
  	}
  	]
  };
+
+var awesomeThoughts = "I am Zoe Jane and I am AWESOME!"
+console.log(awesomeThoughts);
+
+var email = "cameron@udacity.com";
+var newEmail = email.replace("udacity","gmail");
+console.log(newEmail);
+
+var funThoughts = awesomeThoughts.replace("AWESOME","FUN");
+$("#main").append(funThoughts);
+
+name = "Zoe";
+var formattedName = HTMLheaderName.replace("%data%", name);
+$("#header").append(formattedName);
+
+role = "Web Developer";
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+$("#header").append(formattedRole);
+
+var skills =
+["awesomeness", "programming", "teaching", "JS"];
+$("#main").append(skills);
+
+var bio = {
+	"name": "Zoe",
+	"role": "Developer",
+	"contacts":{
+		"mobile": "123456789",
+		"email": "dadac123@gmail.com"
+	},
+	"skills": skills
+};
+
+$("#main").append(bio.role);
+
+var work = {};
+work.position = "Course Developer";
+work.employer = "Udacity";
+work.year = 0.3;
+
+$("#main").append(work.position);
+
+var education = {
+	"schools": [
+	{
+		"name": "Eckerd College",
+		"major": ["CompSci", "French"]
+	},
+	{
+		"name": "Nova Southeastern University",
+		"major": ["CompSci"]
+	}],
+	"onlineCourses":[
+	{
+		"name": "Udacity"
+	}
+	]
+}
+
+$("#main").append(education.schools[0].name);
+$("#main").append(education.onlineCourses[0].name);
