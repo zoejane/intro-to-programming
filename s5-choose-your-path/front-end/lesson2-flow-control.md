@@ -73,3 +73,32 @@ For more information about the special relationship between Functions and Object
 ## Encapsulating Functions
 ### :last
 If you're interested, you can read more about jQuery's :last selector [here](http://www.w3schools.com/jquery/sel_last.asp). 
+
+## Independent Research
+In case you're interested, here's a [Short History of JavaScript](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript). 
+
+Please wait until after you've completed the quiz to read the following.   
+
+Anonymous functions are functions that don't have a name and are often returned by other functions and objects.   
+
+Some JavaScript libraries ask for a callback function to be executed once they have have the results of a task. Anonymous functions are used in these cases because there is not a need to call the function by name outside the confines of the enclosing function.  
+
+For example, the code below reads a JSON file from the server. After loading, it executes an anonymous function to print out the data.  
+
+```
+$.getJSON("test.json", function(data) {
+    console.log(data);
+});
+```
+
+Anything that uses an anonymous function could also use a named function. The following code is also valid and is equivalent to what's listed above:
+
+```
+var printData = function(data){
+  console.log(data)
+};
+$.getJSON("test.json", printData);
+```
+[Anonymous functions in JavaScript](http://en.wikipedia.org/wiki/Anonymous_function#JavaScript)
+
+## Customize the Portfolio
