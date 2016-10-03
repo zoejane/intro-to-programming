@@ -66,3 +66,10 @@ $(document).click(function(loc) {
 ### loc 
 loc is a jQuery event object that contains information about the click event. Learn about event's properties with [jQuery's documentation](http://api.jquery.com/category/events/event-object/).
 
+## Encapsulation
+For more information about the special relationship between Functions and Objects, see [here](http://helephant.com/2008/08/19/functions-are-first-class-objects-in-javascript/).
+![](http://7xsjcm.com1.z0.glb.clouddn.com/16-10-1/32552232.jpg)
+
+## Encapsulating Functions
+### :last
+If you're interested, you can read more about jQuery's :last selector [here](http://www.w3schools.com/jquery/sel_last.asp). 

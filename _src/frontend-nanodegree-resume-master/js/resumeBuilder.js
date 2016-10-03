@@ -259,13 +259,13 @@ var project = {
  		"title": "Movie Website",
  		"dates":2016,
  		"description": "Using Python and HTML/CSS",
- 		"images": ["images/project1.jpg"]
+ 		"image": ["images/project1.jpg"]
  	},
  	{
  		"title": "Resume",
  		"dates": 2016,
  		"description": "Using JavaScript",
- 		"images": ["images/project2.jpg"]
+ 		"image": ["images/project2.jpg"]
  	}
  	]
 
@@ -412,3 +412,22 @@ function inName(oldName) {
 };
 
 $("#main").append(internationalizeButton);
+
+projects.display = function(){
+for(project_index in project.projects){
+	console.log(project.projects[project_index].title);
+	$("#projects").append(HTMLprojectStart);
+
+	var formattedTitle = HTMLprojectTitle.replace("%data%",project.projects[project_index].title);
+	var formattedDates = HTMLprojectDates.replace("%data%",project.projects[project_index].dates);
+	var formattedDescription = HTMLprojectDescription.replace("%data%",project.projects[project_index].description);
+	var formattedImage = HTMLprojectImage.replace("%data%",project.projects[project_index].image);
+
+	$(".project-entry:last").append(formattedTitle);
+	$(".project-entry:last").append(formattedDates);
+	$(".project-entry:last").append(formattedDescription);
+	$(".project-entry:last").append(formattedImage);
+}
+}
+
+projects.display();
