@@ -375,8 +375,8 @@ var education = {
  	{
  		"name": "CSUST",
  		"location": "Changsha, China",
- 		"degree dates":2013,
- 		"url": "http://example.com",
+ 		"degree":"Master",
+ 		"dates": 2013,
  		"major":["GIS","Finance"]
  	}
  	],
@@ -390,7 +390,33 @@ var education = {
  	]
  }
 
+education.display = function(){
+	for (school in education.schools){
+		$("#education").append(HTMLschoolStart);
 
+		$(".education-entry:last").append(HTMLschoolName.replace("%data%",education.schools[school].name));
+		$(".education-entry:last").append(HTMLschoolDegree.replace("%data%",education.schools[school].degree));
+		$(".education-entry:last").append(HTMLschoolDates.replace("%data%",education.schools[school].dates));
+		$(".education-entry:last").append(HTMLschoolLocation.replace("%data%",education.schools[school].location));
+		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",education.schools[school].major));
+	}
+
+	if (education.onlineCourses.length > 0 ){
+		$("#education").append(HTMLonlineClasses);
+	}
+	for (online in education.onlineCourses){
+		$("#education").append(HTMLschoolStart);
+
+		$(".education-entry:last").append(HTMLonlineTitle.replace("%data%",education.onlineCourses[online].title));
+		$(".education-entry:last").append(HTMLonlineSchool.replace("%data%",education.onlineCourses[online].school));
+		$(".education-entry:last").append(HTMLonlineDates.replace("%data%",education.onlineCourses[online].dates));
+		$(".education-entry:last").append(HTMLonlineURL.replace("%data%",education.onlineCourses[online].url));
+		
+		//$("#education").append(HTMLonlineClasses);
+	}
+	
+}	
+education.display();
 
 /*
 var cameron = {};
@@ -422,7 +448,7 @@ for(country in countries){
 */
 
 
-
+/*
 $(document).click(function(loc) {
   // your code goes here
   var x = loc.pageX;
@@ -443,6 +469,7 @@ function locationizer(work_obj){
 }
 
 console.log(locationizer(work));
+*/
 
 var name = bio.name;
 
@@ -459,7 +486,5 @@ function inName(oldName) {
 };
 
 $("#main").append(internationalizeButton);
-
-
 
 $("#mapDiv").append(googleMap);
