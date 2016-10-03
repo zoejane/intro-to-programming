@@ -102,3 +102,17 @@ $.getJSON("test.json", printData);
 [Anonymous functions in JavaScript](http://en.wikipedia.org/wiki/Anonymous_function#JavaScript)
 
 ## Customize the Portfolio
+### Google Maps API Key
+Google is increasingly requiring an API key to make Google Map requests. You can obtain your own Google Maps API key [here](https://developers.google.com/maps/documentation/javascript/get-api-key#types-of-api-keys).  
+
+Once obtained, you can add the key to the Google Maps API script request in index.html:   
+
+```
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY_HERE"></script> 
+```
+
+Want to learn about HTML and CSS? Try out [Intro to HTML and CSS](https://www.udacity.com/course/ud304?_ga=1.76760913.53639439.1458784522).   
+Want to check out your classmates' resumes? Check [them out on GitHub](https://github.com/search?utf8=%E2%9C%93&q=frontend-nanodegree-resume).  
+
+## The Final Project!
+Feel free to extend the project to make it your own. It is fairly simple to add interactivity like [maps](https://developers.google.com/maps/documentation/javascript/tutorial) or [charts](http://d3js.org/).
