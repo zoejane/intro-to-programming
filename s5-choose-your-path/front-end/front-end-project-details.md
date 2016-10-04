@@ -120,5 +120,12 @@ If you are having any problems submitting your project or wish to check on the s
 You will get an email as soon as your reviewer has feedback for you. In the meantime, review your next project and feel free to get started on it or the courses supporting it!
 
 ####Useful Links
-[Udacity Front End Javascript Style Guide](https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+[Udacity Front End Javascript Style Guide](https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)  
+['forEach' or 'for'](https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop)
 
+#### Code Quality
+Code is ready for review following the [Front-End Nanodegree style guide](http://udacity.github.io/frontend-nanodegree-styleguide/) and has been cleaned using the following tools:
+
+- javaScript: [JsHint](http://jshint.com/) and [jsBeautifier](http://jsbeautifier.org/)
+- HTML: [HTML Beautifier](http://www.cleancss.com/html-beautify/)
+- CSS: [CSS Beautifier](http://html.fwpolice.com/css/)
