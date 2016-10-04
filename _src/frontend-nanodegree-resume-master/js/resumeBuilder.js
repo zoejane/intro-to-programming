@@ -194,14 +194,13 @@ projects.display = function(){
 projects.display();
 
 // code for internationalizeButton
-var name = bio.name;
 function inName(oldName) {
-    var finalName = oldName;
-    position = finalName.search(' ')
-    finalName = finalName[0].toUpperCase()
-    + finalName.slice(1,position).toLowerCase()
-    + finalName.slice(position).toUpperCase()
-    return finalName;
+	var finalName = oldName;
+	position = finalName.search(' ');
+	finalName = finalName[0].toUpperCase() + 
+	finalName.slice(1,position).toLowerCase() + 
+	finalName.slice(position).toUpperCase();
+	return finalName;
 }
 $("#main").append(internationalizeButton);
 
