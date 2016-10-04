@@ -15,6 +15,7 @@ var bio = {
 }
 
 bio.display = function(){
+	// use prepend to make sure name and role showed at beginning, before "contacts" part.
 	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 	$("#header").prepend(formattedRole);
 	var formattedName = HTMLheaderName.replace("%data%",bio.name);
@@ -27,6 +28,7 @@ bio.display = function(){
 	$("#topContacts").append(HTMLblog.replace("%data%",bio.contacts.blog));
 	$("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
 
+	// footerContacts is at the bottom of the page, under "Let's Connect" part.
 	$("#footerContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
 	$("#footerContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
 	$("#footerContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
@@ -82,6 +84,7 @@ education.display = function(){
 		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",education.schools[school].major));
 	}
 
+	// add onlineCourses
 	if (education.onlineCourses.length > 0 ){
 		$("#education").append(HTMLonlineClasses);
 	}
@@ -137,13 +140,11 @@ work.display = function(){
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
 		$(".work-entry:last").append(formattedEmployerTitle);
 
 		var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
 		var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
 		var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
-
 		$(".work-entry:last").append(formattedLocation);
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedDescription);
@@ -189,9 +190,9 @@ projects.display = function(){
 		}
 	}
 }
-
 projects.display();
 
+// code for internationalizeButton
 var name = bio.name;
 function inName(oldName) {
     var finalName = oldName;
@@ -201,7 +202,6 @@ function inName(oldName) {
     + finalName.slice(position).toUpperCase()
     return finalName;
 };
-
 $("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
