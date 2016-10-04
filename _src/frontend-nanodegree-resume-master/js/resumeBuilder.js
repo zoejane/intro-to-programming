@@ -39,17 +39,15 @@ bio.display = function(){
 	$("#header").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage));
 
 	// if skills exist, then add skills part.
-	if(bio.skills.length > 0) {
-		
+	if (bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 
-		var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
-		$("#skills").append(formattedSkill);
-	 }
+		bio.skills.forEach(function(skill) {
+			var formattedSkill = HTMLskills.replace("%data%",skill);
+			$("#skills").append(formattedSkill);
+			});
+		}
+
 };
 bio.display();
 
