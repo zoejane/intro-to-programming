@@ -1,18 +1,18 @@
 var bio = {
- 	"name": "Zoe Jane",
- 	"role": "Learner",
- 	"welcomeMessage": "Hello world!",
- 	"biopic": "images/me.png",
- 	"contacts": {
- 		"mobile":"123456",
- 		"email": "dadac123@gmail.com",
- 		"github": "zoejane",
- 		"twitter": "@dadac123",
- 		"blog": "http://zoejane.net/",
- 		"location":  "China"
- 	},
- 	"skills": ["programming","writing","music"]
- };
+	"name": "Zoe Jane",
+	"role": "Learner",
+	"welcomeMessage": "Hello world!",
+	"biopic": "images/me.png",
+	"contacts": {
+		"mobile":"123456",
+		"email": "dadac123@gmail.com",
+		"github": "zoejane",
+		"twitter": "@dadac123",
+		"blog": "http://zoejane.net/",
+		"location":  "China"
+	},
+	"skills": ["programming","writing","music"]
+};
 
 bio.display = function(){
 	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
@@ -27,6 +27,7 @@ bio.display = function(){
 	$("#topContacts").append(HTMLblog.replace("%data%",bio.contacts.blog));
 	$("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
 
+	// add footerContacts at the bottome of the page.
 	$("#footerContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
 	$("#footerContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
 	$("#footerContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
@@ -37,6 +38,7 @@ bio.display = function(){
 	$("#header").append(HTMLbioPic.replace("%data%",bio.biopic));
 	$("#header").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage));
 
+	// if skills exist, then add skills part.
 	if(bio.skills.length > 0) {
 		
 		$("#header").append(HTMLskillsStart);
@@ -52,24 +54,24 @@ bio.display = function(){
 bio.display();
 
 var education = {
- 	"schools": [
- 	{
- 		"name": "CSUST",
- 		"location": "Changsha, China",
- 		"degree":"Master",
- 		"dates": "2013",
- 		"major":["GIS","Finance"]
- 	}
- 	],
- 	"onlineCourses": [
- 	{
- 		"title":"Intro to Programming",
- 		"school":"Udacity",
- 		"dates":"2016",
- 		"url": "http://www.udacity.com"
- 	}
- 	]
- };
+	"schools": [
+	{
+		"name": "CSUST",
+		"location": "Changsha, China",
+		"degree":"Master",
+		"dates": "2013",
+		"major":["GIS","Finance"]
+	}
+	],
+	"onlineCourses": [
+	{
+		"title":"Intro to Programming",
+		"school":"Udacity",
+		"dates":"2016",
+		"url": "http://www.udacity.com"
+	}
+	]
+};
 
 education.display = function(){
 	education.schools.forEach(function(school){
@@ -82,6 +84,7 @@ education.display = function(){
 		$(".education-entry:last").append(HTMLschoolMajor.replace("%data%",school.major));
 	});
 
+	// if onlineCourses exist, add it.
 	if (education.onlineCourses.length > 0 ){
 		$("#education").append(HTMLonlineClasses);
 	}
@@ -98,36 +101,36 @@ education.display = function(){
 education.display();
 
 var work = {
-  "jobs": [
-    {
-      "employer": "Udacity",
-      "title": "Course Developer",
-      "location": "Mountain View, CA",
-      "dates": "Feb 2014 - Current",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "LearnBIG",
-      "title": "Software Engineer",
-      "location": "Seattle, WA",
-      "dates": "May 2013 - Jan 2014",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "LEAD Academy Charter High School",
-      "title": "Science Teacher",
-      "location": "Nashville, TN",
-      "dates": "Jul 2012 - May 2013",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "Stratford High School",
-      "title": "Science Teacher",
-      "location": "Nashville, TN",
-      "dates": "Jun 2009 - Jun 2012",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    }
-  ]
+	"jobs": [
+	{
+		"employer": "Udacity",
+		"title": "Course Developer",
+		"location": "Mountain View, CA",
+		"dates": "Feb 2014 - Current",
+		"description": "Who moved my cheese cheesy feet cauliflower cheese."
+	},
+	{
+		"employer": "LearnBIG",
+		"title": "Software Engineer",
+		"location": "Seattle, WA",
+		"dates": "May 2013 - Jan 2014",
+		"description": "Who moved my cheese cheesy feet cauliflower cheese."
+	},
+	{
+		"employer": "LEAD Academy Charter High School",
+		"title": "Science Teacher",
+		"location": "Nashville, TN",
+		"dates": "Jul 2012 - May 2013",
+		"description": "Who moved my cheese cheesy feet cauliflower cheese."
+	},
+	{
+		"employer": "Stratford High School",
+		"title": "Science Teacher",
+		"location": "Nashville, TN",
+		"dates": "Jun 2009 - Jun 2012",
+		"description": "Who moved my cheese cheesy feet cauliflower cheese."
+	}
+	]
 };
 
 work.display = function(){
@@ -137,13 +140,11 @@ work.display = function(){
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",job.employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",job.title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
 		$(".work-entry:last").append(formattedEmployerTitle);
 
 		var formattedLocation = HTMLworkLocation.replace("%data%",job.location);
 		var formattedDates = HTMLworkDates.replace("%data%",job.dates);
 		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
-
 		$(".work-entry:last").append(formattedLocation);
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedDescription);
@@ -154,22 +155,22 @@ work.display = function(){
 work.display();
 
 var project = {
- 	"projects": [
- 	{
- 		"title": "Movie Website",
- 		"dates":"2016",
- 		"description": "Using Python and HTML/CSS",
- 		"images": ["images/project1.jpg","images/project1.jpg"]
- 	},
- 	{
- 		"title": "Resume",
- 		"dates": "2016",
- 		"description": "Using JavaScript",
- 		"images": ["images/project2.jpg"]
- 	}
- 	]
+	"projects": [
+	{
+		"title": "Movie Website",
+		"dates":"2016",
+		"description": "Using Python and HTML/CSS",
+		"images": ["images/project1.jpg","images/project1.jpg"]
+	},
+	{
+		"title": "Resume",
+		"dates": "2016",
+		"description": "Using JavaScript",
+		"images": ["images/project2.jpg"]
+	}
+	]
 
- };
+};
 
 projects.display = function(){
 	for (project_index in project.projects){
@@ -194,6 +195,7 @@ projects.display = function(){
 
 projects.display();
 
+// code for internationalizeButton
 var name = bio.name;
 function inName(oldName) {
     var finalName = oldName;
@@ -203,7 +205,6 @@ function inName(oldName) {
     +finalName.slice(position).toUpperCase()
     return finalName;
 }
-
 $("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
