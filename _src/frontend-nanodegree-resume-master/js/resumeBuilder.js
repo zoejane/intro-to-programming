@@ -21,22 +21,22 @@ bio.display = function() {
     $("#header").prepend(formattedName);
 
     $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile),
-                             HTMLemail.replace("%data%", bio.contacts.email),
-                             HTMLtwitter.replace("%data%", bio.contacts.twitter),
-                             HTMLgithub.replace("%data%", bio.contacts.github),
-                             HTMLblog.replace("%data%", bio.contacts.blog),
-                             HTMLlocation.replace("%data%", bio.contacts.location));
+        HTMLemail.replace("%data%", bio.contacts.email),
+        HTMLtwitter.replace("%data%", bio.contacts.twitter),
+        HTMLgithub.replace("%data%", bio.contacts.github),
+        HTMLblog.replace("%data%", bio.contacts.blog),
+        HTMLlocation.replace("%data%", bio.contacts.location));
 
     // add footerContacts at the bottome of the page.
     $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile),
-                                HTMLemail.replace("%data%", bio.contacts.email),
-                                HTMLtwitter.replace("%data%", bio.contacts.twitter),
-                                HTMLgithub.replace("%data%", bio.contacts.github),
-                                HTMLblog.replace("%data%", bio.contacts.blog),
-                                HTMLlocation.replace("%data%", bio.contacts.location));
+        HTMLemail.replace("%data%", bio.contacts.email),
+        HTMLtwitter.replace("%data%", bio.contacts.twitter),
+        HTMLgithub.replace("%data%", bio.contacts.github),
+        HTMLblog.replace("%data%", bio.contacts.blog),
+        HTMLlocation.replace("%data%", bio.contacts.location));
 
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic),
-                        HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+        HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 
     // if skills exist, then add skills part.
     if (bio.skills.length > 0) {
@@ -73,11 +73,11 @@ education.display = function() {
         $("#education").append(HTMLschoolStart);
 
         $(".education-entry:last").append(HTMLschoolName.replace("%data%", school.name),
-                                          HTMLschoolDegree.replace("%data%", school.degree),
-                                          HTMLschoolDates.replace("%data%", school.dates),
-                                          HTMLschoolLocation.replace("%data%", school.location),
-                                          HTMLschoolMajor.replace("%data%", school.majors),
-                                          HTMLonlineURL.replace("%data%", school.url));
+            HTMLschoolDegree.replace("%data%", school.degree),
+            HTMLschoolDates.replace("%data%", school.dates),
+            HTMLschoolLocation.replace("%data%", school.location),
+            HTMLschoolMajor.replace("%data%", school.majors),
+            HTMLonlineURL.replace("%data%", school.url));
     });
 
     // if onlineCourses exist, add it.
@@ -88,9 +88,9 @@ education.display = function() {
         $("#education").append(HTMLschoolStart);
 
         $(".education-entry:last").append(HTMLonlineTitle.replace("%data%", online.title),
-                                          HTMLonlineSchool.replace("%data%", online.school),
-                                          HTMLonlineDates.replace("%data%", online.dates),
-                                          HTMLonlineURL.replace("%data%", online.url));
+            HTMLonlineSchool.replace("%data%", online.school),
+            HTMLonlineDates.replace("%data%", online.dates),
+            HTMLonlineURL.replace("%data%", online.url));
     });
 
 };
