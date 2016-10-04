@@ -173,24 +173,24 @@ var project = {
 };
 
 projects.display = function(){
-	for (project_index in project.projects){
+	project.projects.forEach(function(project_index){
 		$("#projects").append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace("%data%",project.projects[project_index].title);
-		var formattedDates = HTMLprojectDates.replace("%data%",project.projects[project_index].dates);
-		var formattedDescription = HTMLprojectDescription.replace("%data%",project.projects[project_index].description);
+		var formattedTitle = HTMLprojectTitle.replace("%data%",project_index.title);
+		var formattedDates = HTMLprojectDates.replace("%data%",project_index.dates);
+		var formattedDescription = HTMLprojectDescription.replace("%data%",project_index.description);
 
 		$(".project-entry:last").append(formattedTitle);
 		$(".project-entry:last").append(formattedDates);
 		$(".project-entry:last").append(formattedDescription);
 
-		if (project.projects[project_index].images.length > 0) {
-			for (image in project.projects[project_index].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project_index].images[image]);
+		if (project_index.images.length > 0) {
+			project_index.images.forEach(function(image) {
+				var formattedImage = HTMLprojectImage.replace("%data%", image);
 				$(".project-entry:last").append(formattedImage);
-			}
+			});
 		}
-	}
+	});
 };
 
 projects.display();
@@ -201,8 +201,8 @@ function inName(oldName) {
     var finalName = oldName;
     position = finalName.search(' ')
     finalName = finalName[0].toUpperCase()
-    +finalName.slice(1,position).toLowerCase()
-    +finalName.slice(position).toUpperCase()
+    + finalName.slice(1,position).toLowerCase()
+    + finalName.slice(position).toUpperCase()
     return finalName;
 }
 $("#main").append(internationalizeButton);
