@@ -283,7 +283,7 @@ var project = {
  		"title": "Movie Website",
  		"dates":2016,
  		"description": "Using Python and HTML/CSS",
- 		"images": ["images/project1.jpg","images/me.png"]
+ 		"images": ["images/project1.jpg","images/project1.jpg"]
  	},
  	{
  		"title": "Resume",
@@ -352,6 +352,13 @@ bio.display = function(){
 	$("#topContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
 	$("#topContacts").append(HTMLblog.replace("%data%",bio.contacts.blog));
 	$("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
+
+	$("#footerContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
+	$("#footerContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
+	$("#footerContacts").append(HTMLtwitter.replace("%data%",bio.contacts.twitter));
+	$("#footerContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
+	$("#footerContacts").append(HTMLblog.replace("%data%",bio.contacts.blog));
+	$("#footerContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
 
 	$("#header").append(HTMLbioPic.replace("%data%",bio.biopic));
 	$("#header").append(HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage));
