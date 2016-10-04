@@ -220,107 +220,7 @@ var work = {
  	]
  }
 */
-var work = {
-  "jobs": [
-    {
-      "employer": "Udacity",
-      "title": "Course Developer",
-      "location": "Mountain View, CA",
-      "dates": "Feb 2014 - Current",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "LearnBIG",
-      "title": "Software Engineer",
-      "location": "Seattle, WA",
-      "dates": "May 2013 - Jan 2014",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "LEAD Academy Charter High School",
-      "title": "Science Teacher",
-      "location": "Nashville, TN",
-      "dates": "Jul 2012 - May 2013",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    },
-    {
-      "employer": "Stratford High School",
-      "title": "Science Teacher",
-      "location": "Nashville, TN",
-      "dates": "Jun 2009 - Jun 2012",
-      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
-    }
-  ]
-};
 
-function displayWork(){
-for(job in work.jobs){
-	console.log(work.jobs[job].title);
-	$("#workExperience").append(HTMLworkStart);
-
-	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
-	var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-
-	$(".work-entry:last").append(formattedEmployerTitle);
-
-	var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
-	var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-	var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
-
-	$(".work-entry:last").append(formattedLocation);
-	$(".work-entry:last").append(formattedDates);
-	$(".work-entry:last").append(formattedDescription);
-}
-
-}
-
-displayWork();
-
-var project = {
- 	"projects": [
- 	{
- 		"title": "Movie Website",
- 		"dates":2016,
- 		"description": "Using Python and HTML/CSS",
- 		"images": ["images/project1.jpg","images/project1.jpg"]
- 	},
- 	{
- 		"title": "Resume",
- 		"dates": 2016,
- 		"description": "Using JavaScript",
- 		"images": ["images/project2.jpg"]
- 	}
- 	]
-
- }
-
-projects.display = function(){
-	for (project_index in project.projects){
-		console.log(project.projects[project_index].title);
-		$("#projects").append(HTMLprojectStart);
-
-		var formattedTitle = HTMLprojectTitle.replace("%data%",project.projects[project_index].title);
-		var formattedDates = HTMLprojectDates.replace("%data%",project.projects[project_index].dates);
-		var formattedDescription = HTMLprojectDescription.replace("%data%",project.projects[project_index].description);
-		
-
-		$(".project-entry:last").append(formattedTitle);
-		$(".project-entry:last").append(formattedDates);
-		$(".project-entry:last").append(formattedDescription);
-
-		//console.log(project.projects[project_index].images.length);
-		if (project.projects[project_index].images.length > 0) {
-			for (image in project.projects[project_index].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project_index].images[image]);
-				$(".project-entry:last").append(formattedImage);
-			}
-			//console.log("a");
-		}
-	}
-}
-
-projects.display();
 
 var bio = {
  	"name": "Zoe Jane",
@@ -383,7 +283,7 @@ var education = {
  		"name": "CSUST",
  		"location": "Changsha, China",
  		"degree":"Master",
- 		"dates": 2013,
+ 		"dates": "2013",
  		"major":["GIS","Finance"]
  	}
  	],
@@ -391,7 +291,7 @@ var education = {
  	{
  		"title":"Intro to Programming",
  		"school":"Udacity",
- 		"dates":2016,
+ 		"dates":"2016",
  		"url": "http://www.udacity.com"
  	}
  	]
@@ -424,6 +324,108 @@ education.display = function(){
 	
 }	
 education.display();
+
+var work = {
+  "jobs": [
+    {
+      "employer": "Udacity",
+      "title": "Course Developer",
+      "location": "Mountain View, CA",
+      "dates": "Feb 2014 - Current",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LearnBIG",
+      "title": "Software Engineer",
+      "location": "Seattle, WA",
+      "dates": "May 2013 - Jan 2014",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LEAD Academy Charter High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jul 2012 - May 2013",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "Stratford High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jun 2009 - Jun 2012",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    }
+  ]
+};
+
+function displayWork(){
+for(job in work.jobs){
+	console.log(work.jobs[job].title);
+	$("#workExperience").append(HTMLworkStart);
+
+	var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+	var formattedEmployerTitle = formattedEmployer + formattedTitle;
+
+	$(".work-entry:last").append(formattedEmployerTitle);
+
+	var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
+	var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+	var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+
+	$(".work-entry:last").append(formattedLocation);
+	$(".work-entry:last").append(formattedDates);
+	$(".work-entry:last").append(formattedDescription);
+}
+
+}
+
+displayWork();
+
+var project = {
+ 	"projects": [
+ 	{
+ 		"title": "Movie Website",
+ 		"dates":"2016",
+ 		"description": "Using Python and HTML/CSS",
+ 		"images": ["images/project1.jpg","images/project1.jpg"]
+ 	},
+ 	{
+ 		"title": "Resume",
+ 		"dates": "2016",
+ 		"description": "Using JavaScript",
+ 		"images": ["images/project2.jpg"]
+ 	}
+ 	]
+
+ }
+
+projects.display = function(){
+	for (project_index in project.projects){
+		console.log(project.projects[project_index].title);
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitle = HTMLprojectTitle.replace("%data%",project.projects[project_index].title);
+		var formattedDates = HTMLprojectDates.replace("%data%",project.projects[project_index].dates);
+		var formattedDescription = HTMLprojectDescription.replace("%data%",project.projects[project_index].description);
+		
+
+		$(".project-entry:last").append(formattedTitle);
+		$(".project-entry:last").append(formattedDates);
+		$(".project-entry:last").append(formattedDescription);
+
+		//console.log(project.projects[project_index].images.length);
+		if (project.projects[project_index].images.length > 0) {
+			for (image in project.projects[project_index].images) {
+				var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project_index].images[image]);
+				$(".project-entry:last").append(formattedImage);
+			}
+			//console.log("a");
+		}
+	}
+}
+
+projects.display();
 
 /*
 var cameron = {};
