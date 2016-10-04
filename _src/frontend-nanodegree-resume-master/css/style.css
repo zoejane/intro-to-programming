@@ -102,12 +102,10 @@ a {
 }
 
 .pink {
-  /*background-color: #f5ae23;*/
     background-color: #fa7c92;
 }
 
 .pink-text {
-  /*color: #f5ae23;*/
     color: #fa7c92;
 }
 
@@ -128,7 +126,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-    background-color: #438496;
+    background-color: #4a4a4a;
 }
 
 .flex-box {
