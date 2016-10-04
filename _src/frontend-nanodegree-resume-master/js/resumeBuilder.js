@@ -57,7 +57,8 @@ var education = {
         "location": "Changsha, China",
         "degree": "Master",
         "dates": "2013",
-        "major": ["GIS", "Finance"]
+        "majors": ["GIS", "Finance"],
+        "url": "http://www.udacity.com"
     }],
     "onlineCourses": [{
         "title": "Intro to Programming",
@@ -75,7 +76,8 @@ education.display = function() {
                                           HTMLschoolDegree.replace("%data%", school.degree),
                                           HTMLschoolDates.replace("%data%", school.dates),
                                           HTMLschoolLocation.replace("%data%", school.location),
-                                          HTMLschoolMajor.replace("%data%", school.major));
+                                          HTMLschoolMajor.replace("%data%", school.majors),
+                                          HTMLonlineURL.replace("%data%", school.url));
     });
 
     // if onlineCourses exist, add it.
@@ -141,7 +143,7 @@ work.display = function() {
 
 work.display();
 
-var project = {
+var projects = {
     "projects": [{
         "title": "Movie Website",
         "dates": "2016",
@@ -157,7 +159,7 @@ var project = {
 };
 
 projects.display = function() {
-    project.projects.forEach(function(project_index) {
+    projects.projects.forEach(function(project_index) {
         $("#projects").append(HTMLprojectStart);
 
         var formattedTitle = HTMLprojectTitle.replace("%data%", project_index.title);
